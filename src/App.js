@@ -45,28 +45,28 @@ function App() {
           <h1 className='text-gray-800 text-4xl text-center'>Portfolio</h1>
           <div className='cards flex-row flex gap-3 pt-8'>
             <div className='card bg-white basis-1/3 md:basis-1/2'>
-              <img src='./portfolio/photocelos.jpg'></img>
+              <img src='./portfolio/photocelos.jpg' alt='Photocelos'></img>
               <div className='card-content'>
                 <div className='card-title text-xl text-green-800 text-center pt-5'>PhotoCelos</div>
                 <div className='card-description text-black text-justify p-5'>Um website para ajudar as pessoas a descobrir o patrimonio Barcelos</div>
               </div>
             </div>
             <div className='card bg-white basis-1/3 md:basis-1/2'>
-              <img src='./portfolio/motocavaquinho.png'></img>
+              <img src='./portfolio/motocavaquinho.png' alt='Motocavaquinhos'></img>
               <div className='card-content'>
                 <div className='card-title text-xl text-green-800 text-center pt-5'>Motocavaquinhos</div>
                 <div className='card-description text-black text-justify p-5'>Um website de uma associação de motociclistas de Barcelos</div>
               </div>
             </div>
             <div className='card bg-white basis-1/3 md:basis-1/2'>
-              <img src='./portfolio/tecniwall.jpg'></img>
+              <img src='./portfolio/tecniwall.jpg' alt='tecniwall'></img>
               <div className='card-content'>
                 <div className='card-title text-xl text-green-800 text-center pt-5'>Tecniwall</div>
                 <div className='card-description text-black text-justify p-5'>Uma empresa especializada em fazer placas de gesso</div>
               </div>
             </div>
             <div className='card bg-white basis-1/3 md:basis-1/2'>
-              <img src='./portfolio/belofer.png'></img>
+              <img src='./portfolio/belofer.png' alt='belofer'></img>
               <div className='card-content'>
                 <div className='card-title text-xl text-green-800 text-center pt-5'>Belofer</div>
                 <div className='card-description text-black text-justify p-5'>Uma empresa de comercio de maquinas e peças para a industria textil</div>
