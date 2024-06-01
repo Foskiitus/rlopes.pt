@@ -1,17 +1,29 @@
 import "./App.css";
-import Contact from "./sections/Contact/Contact";
-import Footer from "./sections/Footer/Footer";
 import Hero from "./sections/Hero/Hero";
-import Projects from "./sections/Projects/Projects";
-import Skills from "./sections/Skills/Skills";
+
+import { lazy, Suspense } from "react";
+
+const Projects = lazy(() => import("./sections/Projects/Projects"));
+const Skills = lazy(() => import("./sections/Skills/Skills"));
+const Contact = lazy(() => import("./sections/Contact/Contact"));
+const Footer = lazy(() => import("./sections/Footer/Footer"));
+
 function App() {
   return (
     <>
       <Hero />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Projects />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Skills />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Contact />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Footer />
+      </Suspense>
     </>
   );
 }

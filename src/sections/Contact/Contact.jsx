@@ -3,6 +3,7 @@ import styles from "./Contact.module.css";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { motion } from "framer-motion";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -79,9 +80,21 @@ function Contact() {
   }
   return (
     <section id="contact" className={styles.container}>
-      <h1 className="sectionTitle">Contact</h1>
+      <motion.h1
+        className="sectionTitle"
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ delay: 0.35, duration: 0.5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        Contact
+      </motion.h1>
       <form onSubmit={handleContactFormSubmit}>
-        <div className="formGroup">
+        <motion.div
+          className="formGroup"
+          initial={{ opacity: 0, x: 50 }}
+          transition={{ delay: 0.35, duration: 0.5 }}
+          whileInView={{ opacity: 1, x: 0 }}
+        >
           <label htmlFor="name" hidden>
             Name
           </label>
@@ -94,8 +107,13 @@ function Contact() {
             required
             onChange={(e) => setName(e.target.value)}
           />
-        </div>
-        <div className="formGroup">
+        </motion.div>
+        <motion.div
+          className="formGroup"
+          initial={{ opacity: 0, x: -50 }}
+          transition={{ delay: 0.35, duration: 0.5 }}
+          whileInView={{ opacity: 1, x: 0 }}
+        >
           <label htmlFor="email" hidden>
             Email
           </label>
@@ -108,8 +126,13 @@ function Contact() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-        </div>
-        <div className="formGroup">
+        </motion.div>
+        <motion.div
+          className="formGroup"
+          initial={{ opacity: 0, x: 50 }}
+          transition={{ delay: 0.35, duration: 0.5 }}
+          whileInView={{ opacity: 1, x: 0 }}
+        >
           <label htmlFor="message" hidden>
             Message
           </label>
@@ -121,7 +144,7 @@ function Contact() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
-        </div>
+        </motion.div>
         <input type="submit" value="Submit" className="hover btn" />
       </form>
       <ToastContainer />

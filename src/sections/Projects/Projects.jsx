@@ -4,6 +4,8 @@ import { PortfolioData } from "../../../data";
 
 import ProjectCard from "../../common/ProjectCard";
 
+import { motion } from "framer-motion";
+
 const itemsReverseOrder = PortfolioData.sort((a, b) => b.id - a.id).filter(
   (item) => item.featured === true
 );
@@ -11,7 +13,14 @@ const itemsReverseOrder = PortfolioData.sort((a, b) => b.id - a.id).filter(
 function Projects() {
   return (
     <section id="projects" className={styles.container}>
-      <h1 className="sectionTitle">Projects</h1>
+      <motion.h1
+        className="sectionTitle"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.25, duration: 0.5 }}
+      >
+        Projects
+      </motion.h1>
       <div className={styles.projectsContainer}>
         {itemsReverseOrder.map((project) => (
           <ProjectCard

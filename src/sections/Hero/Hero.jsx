@@ -9,6 +9,8 @@ import linkedinDark from "../../assets/linkedin-dark.svg";
 import CV from "../../assets/Ricardo_Lopes_CV.pdf";
 import { useTheme } from "../../common/ThemeContext";
 
+import { motion } from "framer-motion";
+
 function Hero() {
   const { theme, toggleTheme } = useTheme();
 
@@ -18,7 +20,16 @@ function Hero() {
 
   return (
     <section id="hero" className={styles.container}>
-      <div className={styles.colorModeContainer}>
+      <motion.div
+        className={styles.colorModeContainer}
+        variants={{
+          hidden: { opacity: 0, x: 275 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ delay: 0.25, duration: 0.5 }}
+      >
         <img
           className={styles.hero}
           src={heroImg}
@@ -30,8 +41,17 @@ function Hero() {
           alt="Color mode icon"
           onClick={toggleTheme}
         />
-      </div>
-      <div className={styles.info}>
+      </motion.div>
+      <motion.div
+        className={styles.info}
+        variants={{
+          hidden: { opacity: 0, x: -275 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ delay: 0.25, duration: 0.5 }}
+      >
         <h1>
           Ricardo
           <br />
@@ -53,7 +73,7 @@ function Hero() {
         <a href={CV} download>
           <button className="hover">Resume</button>
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 }
