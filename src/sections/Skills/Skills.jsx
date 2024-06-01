@@ -1,9 +1,16 @@
 import styles from "./Skills.module.css";
-import checkMarkIcon from "../../assets/checkmark-dark.svg";
+import checkMarkDarkIcon from "../../assets/checkmark-dark.svg";
+import checkMarkLightIcon from "../../assets/checkmark-light.svg";
 import SkillList from "../../common/SkillList";
 import { motion } from "framer-motion";
+import { useTheme } from "../../common/ThemeContext";
 
 function Skills() {
+  const { theme } = useTheme();
+
+  const checkMarkIcon =
+    theme === "light" ? checkMarkLightIcon : checkMarkDarkIcon;
+
   return (
     <motion.section
       id="skills"
