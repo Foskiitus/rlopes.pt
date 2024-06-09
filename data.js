@@ -113,7 +113,7 @@ export const PortfolioData = [
     featured: true,
     title: "TempoApp",
     img: "/portfolio/mobile/tempoApp.jpg",
-    desc: "A mobile application created during the learning period of ReactNative",
+    desc: "A mobile application created during the learning period of JavaScript",
     link: "https://github.com/Foskiitus/tempoApp",
   },
   {
