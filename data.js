@@ -5,7 +5,7 @@ export const PortfolioData = [
     featured: true,
     title: "Photocelos",
     img: "/portfolio/web/photocelos.jpg",
-    desc: "Este projecto tem por objectivo dar a conhecer o patrimonio do concelho de Barcelos",
+    desc: "This project aims to showcase the heritage of the municipality of Barcelos",
     link: "",
   },
   {
@@ -14,7 +14,7 @@ export const PortfolioData = [
     featured: false,
     title: "Alotecnica",
     img: "/portfolio/web/alotecnica.jpeg",
-    desc: "Um website simples e elegante para uma empresa de reparação de telemóveis em Barcelos",
+    desc: "A elegant and simple website for a mobile phone repair company in Barcelos",
     link: "",
   },
   {
@@ -23,7 +23,7 @@ export const PortfolioData = [
     featured: false,
     title: "Belofer",
     img: "/portfolio/web/belofer.png",
-    desc: "A Belofer consultou-nos para a criação do seu web site. Um website simples mas elegante.",
+    desc: "Belofer consulted us for the creation of their website. A simple but elegant website.",
     link: "",
   },
   {
@@ -32,7 +32,7 @@ export const PortfolioData = [
     featured: false,
     title: "Credivida",
     img: "/portfolio/web/credivida.png",
-    desc: "Website simples e elegante para uma empresa de créditos",
+    desc: "A elegant and simple website for a credit company",
     link: "",
   },
   {
@@ -41,7 +41,7 @@ export const PortfolioData = [
     featured: true,
     title: "Motocavaquinhos",
     img: "/portfolio/web/motocavaquinho.png",
-    desc: "Um website simples para uma associação de motociclistas de Barcelos",
+    desc: "A elegant and simple website for a motorcycle association in Barcelos",
     link: "",
   },
   {
@@ -50,7 +50,7 @@ export const PortfolioData = [
     featured: false,
     title: "Tecniwall",
     img: "/portfolio/web/tecniwall.jpg",
-    desc: "Um website simples e elegante para uma empresa de construção civil em Barcelos",
+    desc: "A elegant and simple website for a construction company in Barcelos",
     link: "http://www.tecniwall.com/",
   },
   {
@@ -59,7 +59,7 @@ export const PortfolioData = [
     featured: false,
     title: "Vouga Plazza",
     img: "/portfolio/web/vouga-plazza.png",
-    desc: "Um website simples e elegante para um restaurante em Barcelos",
+    desc: "A simple and elegant website for a restaurant in Barcelos",
     link: "",
   },
   {
@@ -68,7 +68,7 @@ export const PortfolioData = [
     featured: false,
     title: "Ritual Restaurante",
     img: "/portfolio/web/ritual-restaurante.png",
-    desc: "Um website simples e elegante para um restaurante em Barcelos",
+    desc: "A simple and elegant website for a restaurant in Barcelos",
     link: "",
   },
   {
@@ -77,7 +77,7 @@ export const PortfolioData = [
     featured: false,
     title: "Paula Soares da Costa",
     img: "/portfolio/web/paulasoarescosta.png",
-    desc: "Um website simples e elegante para uma empresa de contabilidade",
+    desc: "A simple and elegant website for an accounting firm",
     link: "",
   },
   {
@@ -86,7 +86,7 @@ export const PortfolioData = [
     featured: false,
     title: "Clinica de Medicina de Famalicão",
     img: "/portfolio/web/clinicamedicinafamalicao.png",
-    desc: "Um Website simples e elegante para uma clinica de medicina dentária em Famalicão",
+    desc: "A simple and elegant website for a medical clinic in Famalicão",
     link: "",
   },
   {
@@ -95,7 +95,7 @@ export const PortfolioData = [
     featured: false,
     title: "IncentivoPT",
     img: "/portfolio/web/incentivopt.png",
-    desc: "Um website simples e elegante para uma empresa de incentivos fiscais",
+    desc: "A simple and elegant website for a tax incentive company",
     link: "",
   },
   {
@@ -104,7 +104,7 @@ export const PortfolioData = [
     featured: false,
     title: "Viver Barcelos",
     img: "/portfolio/mobile/viverBarcelos.jpg",
-    desc: "Uma aplicação mobile criada para a dar a conhecer Barcelos",
+    desc: "An application that aims to show the heritage of the municipality of Barcelos",
     link: "",
   },
   {
@@ -113,7 +113,7 @@ export const PortfolioData = [
     featured: true,
     title: "TempoApp",
     img: "/portfolio/mobile/tempoApp.jpg",
-    desc: "Uma aplicação simples criada no decorrer de uma formação",
+    desc: "A mobile application created during the learning period of ReactNative",
     link: "https://github.com/Foskiitus/tempoApp",
   },
   {
@@ -122,7 +122,7 @@ export const PortfolioData = [
     featured: true,
     title: "Evently",
     img: "/portfolio/web/evently.svg",
-    desc: "Uma aplicação em NextJS 14 para gestão de eventos",
+    desc: "A simple event management application in NextJS 14",
     link: "https://github.com/Foskiitus/evently",
   },
   {
@@ -131,7 +131,7 @@ export const PortfolioData = [
     featured: true,
     title: "Tarefas+",
     img: "/portfolio/web/tarefas.png",
-    desc: "Uma aplicação de tarefas em NextJS 14",
+    desc: "A simple task management application in NextJS 14",
     link: "https://github.com/Foskiitus/ProjetoBoardTarefas/",
   },
 ];
