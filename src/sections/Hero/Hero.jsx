@@ -57,7 +57,7 @@ function Hero() {
           <br />
           Lopes
         </h1>
-        <h2>Frontend Developer</h2>
+        <h2>Full-Stack Developer</h2>
         <span>
           <a href="https://github.com/Foskiitus" target="_blank">
             <img src={githubIcon} alt="Github Icon" />
