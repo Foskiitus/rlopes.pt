@@ -4,8 +4,10 @@
   text-align: center;
 
   img {
+    width: 100%;
     max-width: 250px;
-    min-height: 126px;
+    aspect-ratio: 961 / 493;
+    object-fit: cover;
     align-self: center;
     background-color: var(--project-card-bg);
     border-radius: 20px;
@@ -19,6 +21,20 @@
 
   a:hover {
     transform: scale(1.1);
+  }
+
+  .viewAll {
+    align-self: center;
+    margin-top: 30px;
+    color: var(--text-color);
+    text-decoration: underline;
+    font-family: "Roboto Mono", monospace;
+    font-size: 16px;
+  }
+
+  .viewAll:hover {
+    transform: none;
+    opacity: 0.7;
   }
 }
 .projectsContainer {

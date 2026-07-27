@@ -4,8 +4,11 @@ export const PortfolioData = [
     type: "web",
     featured: true,
     title: "Photocelos",
-    img: "/portfolio/web/photocelos.jpg",
-    desc: "This project aims to showcase the heritage of the municipality of Barcelos",
+    img: "/portfolio/web/photocelos.webp",
+    desc: {
+      pt: "Este projeto tem como objetivo mostrar o património do município de Barcelos",
+      en: "This project aims to showcase the heritage of the municipality of Barcelos",
+    },
     link: "",
   },
   {
@@ -13,8 +16,11 @@ export const PortfolioData = [
     type: "web",
     featured: false,
     title: "Alotecnica",
-    img: "/portfolio/web/alotecnica.jpeg",
-    desc: "A elegant and simple website for a mobile phone repair company in Barcelos",
+    img: "/portfolio/web/alotecnica.webp",
+    desc: {
+      pt: "Um website elegante e simples para uma empresa de reparação de telemóveis em Barcelos",
+      en: "An elegant and simple website for a mobile phone repair company in Barcelos",
+    },
     link: "",
   },
   {
@@ -22,8 +28,11 @@ export const PortfolioData = [
     type: "web",
     featured: false,
     title: "Belofer",
-    img: "/portfolio/web/belofer.png",
-    desc: "Belofer consulted us for the creation of their website. A simple but elegant website.",
+    img: "/portfolio/web/belofer.webp",
+    desc: {
+      pt: "A Belofer contactou-nos para a criação do seu website. Um website simples mas elegante.",
+      en: "Belofer consulted us for the creation of their website. A simple but elegant website.",
+    },
     link: "",
   },
   {
@@ -31,8 +40,11 @@ export const PortfolioData = [
     type: "web",
     featured: false,
     title: "Credivida",
-    img: "/portfolio/web/credivida.png",
-    desc: "A elegant and simple website for a credit company",
+    img: "/portfolio/web/credivida.webp",
+    desc: {
+      pt: "Um website elegante e simples para uma empresa de crédito",
+      en: "An elegant and simple website for a credit company",
+    },
     link: "",
   },
   {
@@ -40,8 +52,11 @@ export const PortfolioData = [
     type: "web",
     featured: true,
     title: "Motocavaquinhos",
-    img: "/portfolio/web/motocavaquinho.png",
-    desc: "A elegant and simple website for a motorcycle association in Barcelos",
+    img: "/portfolio/web/motocavaquinho.webp",
+    desc: {
+      pt: "Um website elegante e simples para uma associação motard em Barcelos",
+      en: "An elegant and simple website for a motorcycle association in Barcelos",
+    },
     link: "",
   },
   {
@@ -49,8 +64,11 @@ export const PortfolioData = [
     type: "web",
     featured: false,
     title: "Tecniwall",
-    img: "/portfolio/web/tecniwall.jpg",
-    desc: "A elegant and simple website for a construction company in Barcelos",
+    img: "/portfolio/web/tecniwall.webp",
+    desc: {
+      pt: "Um website elegante e simples para uma empresa de construção civil em Barcelos",
+      en: "An elegant and simple website for a construction company in Barcelos",
+    },
     link: "http://www.tecniwall.com/",
   },
   {
@@ -58,8 +76,11 @@ export const PortfolioData = [
     type: "web",
     featured: false,
     title: "Vouga Plazza",
-    img: "/portfolio/web/vouga-plazza.png",
-    desc: "A simple and elegant website for a restaurant in Barcelos",
+    img: "/portfolio/web/vouga-plazza.webp",
+    desc: {
+      pt: "Um website simples e elegante para um restaurante em Barcelos",
+      en: "A simple and elegant website for a restaurant in Barcelos",
+    },
     link: "",
   },
   {
@@ -67,8 +88,11 @@ export const PortfolioData = [
     type: "web",
     featured: false,
     title: "Ritual Restaurante",
-    img: "/portfolio/web/ritual-restaurante.png",
-    desc: "A simple and elegant website for a restaurant in Barcelos",
+    img: "/portfolio/web/ritual-restaurante.webp",
+    desc: {
+      pt: "Um website simples e elegante para um restaurante em Barcelos",
+      en: "A simple and elegant website for a restaurant in Barcelos",
+    },
     link: "",
   },
   {
@@ -76,8 +100,11 @@ export const PortfolioData = [
     type: "web",
     featured: false,
     title: "Paula Soares da Costa",
-    img: "/portfolio/web/paulasoarescosta.png",
-    desc: "A simple and elegant website for an accounting firm",
+    img: "/portfolio/web/paulasoarescosta.webp",
+    desc: {
+      pt: "Um website simples e elegante para um escritório de contabilidade",
+      en: "A simple and elegant website for an accounting firm",
+    },
     link: "",
   },
   {
@@ -85,8 +112,11 @@ export const PortfolioData = [
     type: "web",
     featured: false,
     title: "Clinica de Medicina de Famalicão",
-    img: "/portfolio/web/clinicamedicinafamalicao.png",
-    desc: "A simple and elegant website for a medical clinic in Famalicão",
+    img: "/portfolio/web/clinicamedicinafamalicao.webp",
+    desc: {
+      pt: "Um website simples e elegante para uma clínica médica em Famalicão",
+      en: "A simple and elegant website for a medical clinic in Famalicão",
+    },
     link: "",
   },
   {
@@ -94,8 +124,11 @@ export const PortfolioData = [
     type: "web",
     featured: false,
     title: "IncentivoPT",
-    img: "/portfolio/web/incentivopt.png",
-    desc: "A simple and elegant website for a tax incentive company",
+    img: "/portfolio/web/incentivopt.webp",
+    desc: {
+      pt: "Um website simples e elegante para uma empresa de incentivos fiscais",
+      en: "A simple and elegant website for a tax incentive company",
+    },
     link: "",
   },
   {
@@ -103,8 +136,11 @@ export const PortfolioData = [
     type: "mobile",
     featured: false,
     title: "Viver Barcelos",
-    img: "/portfolio/mobile/viverBarcelos.jpg",
-    desc: "An application that aims to show the heritage of the municipality of Barcelos",
+    img: "/portfolio/mobile/viverBarcelos.webp",
+    desc: {
+      pt: "Uma aplicação que tem como objetivo mostrar o património do município de Barcelos",
+      en: "An application that aims to show the heritage of the municipality of Barcelos",
+    },
     link: "",
   },
   {
@@ -112,8 +148,11 @@ export const PortfolioData = [
     type: "mobile",
     featured: true,
     title: "TempoApp",
-    img: "/portfolio/mobile/tempoApp.jpg",
-    desc: "A mobile application created during the learning period of JavaScript",
+    img: "/portfolio/mobile/tempoApp.webp",
+    desc: {
+      pt: "Uma aplicação mobile criada durante o período de aprendizagem de JavaScript",
+      en: "A mobile application created during the learning period of JavaScript",
+    },
     link: "https://github.com/Foskiitus/tempoApp",
   },
   {
@@ -122,7 +161,10 @@ export const PortfolioData = [
     featured: true,
     title: "Evently",
     img: "/portfolio/web/evently.svg",
-    desc: "A simple event management application in NextJS 14",
+    desc: {
+      pt: "Uma aplicação simples de gestão de eventos em NextJS 14",
+      en: "A simple event management application in NextJS 14",
+    },
     link: "https://github.com/Foskiitus/evently",
   },
   {
@@ -130,53 +172,23 @@ export const PortfolioData = [
     type: "web",
     featured: true,
     title: "Tarefas+",
-    img: "/portfolio/web/tarefas.png",
-    desc: "A simple task management application in NextJS 14",
+    img: "/portfolio/web/tarefas.webp",
+    desc: {
+      pt: "Uma aplicação simples de gestão de tarefas em NextJS 14",
+      en: "A simple task management application in NextJS 14",
+    },
     link: "https://github.com/Foskiitus/ProjetoBoardTarefas/",
   },
-];
-
-export const worksData = [
   {
-    id: 1,
-    icon: "./assets/mobile.png",
-    title: "Viver Barcelos",
-    desc: "lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    img: "./assets/portfolio/mobile/viverBarcelos.jpg",
-  },
-  {
-    id: 2,
-    icon: "./assets/mobile.png",
-    title: "TempoApp",
-    desc: "É uma aplicação mobile criada durante o período de aprendizagem de JavaScript",
-    img: "./assets/portfolio/mobile/tempoApp.jpg",
-  },
-  {
-    id: 3,
-    icon: "./assets/globe.png",
-    title: "Belofer",
-    desc: "Belofer é um website de uma empresa do ramo do comercio de peças para a industria têxtil de Barcelos",
-    img: "assets/portfolio/web/belofer.png",
-  },
-];
-
-export const testemonialsData = [
-  {
-    id: 1,
-    name: "Jorge",
-    title: "DOTE INVESTE, LDA",
-    img: "assets/avatar.png",
-    icon: "assets/youtube.png",
-    desc: "De salientar a rapidez e a intercomunicabilidade em todo processo de criação.",
-    featured: false,
-  },
-  {
-    id: 2,
-    name: "PRESIDENTE",
-    title: "MOTOCAVAQUINHOS",
-    img: "assets/avatar.png",
-    icon: "assets/youtube.png",
-    desc: "Um site barato, rápido e agradável.",
+    id: 17,
+    type: "web",
     featured: true,
+    title: "SpoolIQ",
+    img: "/portfolio/web/spooliq.webp",
+    desc: {
+      pt: "Plataforma de gestão de negócio para makers de impressão 3D — inventário, produção, custeio e clientes num só lugar",
+      en: "A business management platform for 3D printing makers — inventory, production, costing and clients in one place",
+    },
+    link: "https://spooliq.io",
   },
 ];

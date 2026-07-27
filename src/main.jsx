@@ -1,13 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import { ViteReactSSG } from "vite-react-ssg";
+import { routes } from "./App.jsx";
 import "./index.css";
-import { ThemeProvider } from "./common/ThemeContext.jsx";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>
-);
+export const createRoot = ViteReactSSG({ routes });

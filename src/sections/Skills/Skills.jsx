@@ -4,12 +4,15 @@ import checkMarkLightIcon from "../../assets/checkmark-light.svg";
 import SkillList from "../../common/SkillList";
 import { motion } from "framer-motion";
 import { useTheme } from "../../common/ThemeContext";
+import { useTranslation } from "../../i18n/LocaleContext";
 
 function Skills() {
-  const { theme } = useTheme();
+  const { theme, mounted } = useTheme();
+  const { t } = useTranslation();
 
+  const effectiveTheme = mounted ? theme : "light";
   const checkMarkIcon =
-    theme === "light" ? checkMarkLightIcon : checkMarkDarkIcon;
+    effectiveTheme === "light" ? checkMarkLightIcon : checkMarkDarkIcon;
 
   return (
     <motion.section
@@ -21,7 +24,7 @@ function Skills() {
       viewport={{ once: true }}
       transition={{ delay: 0.25, duration: 0.5 }}
     >
-      <h1 className="sectionTitle">Skills</h1>
+      <h2 className="sectionTitle">{t.skills.title}</h2>
       <motion.div
         className={styles.skillList}
         initial={{ opacity: 0, x: 50 }}
@@ -45,6 +48,7 @@ function Skills() {
         whileInView={{ opacity: 1, x: 0 }}
       >
         <SkillList src={checkMarkIcon} skill="React" />
+        <SkillList src={checkMarkIcon} skill="Next.js" />
         <SkillList src={checkMarkIcon} skill="Tailwind CSS" />
         <SkillList src={checkMarkIcon} skill="TypeScript" />
       </motion.div>

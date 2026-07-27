@@ -1,11 +1,14 @@
 import styles from "./Footer.module.css";
+import { useTranslation } from "../../i18n/LocaleContext";
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <section id="footer" className={styles.container}>
       <p>
-        &copy; 2024 RLopes.
-        <br /> All rights Reserved
+        &copy; {new Date().getFullYear()} RLopes.
+        <br /> {t.footer.rights}
       </p>
     </section>
   );
