@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "title": "Web developer in La Ciotat — Ricardo Lopes",
+    "description": "Websites and web applications for local businesses and independent professionals in La Ciotat and surrounding areas. Explore Ricardo Lopes’s work."
+  },
+  "nav": {
+    "label": "Main navigation",
+    "work": "Work",
+    "services": "Services",
+    "about": "About",
+    "contact": "Let’s discuss your project",
+    "menu": "Open menu",
+    "close": "Close menu",
+    "language": "Choose a language",
+    "home": "Ricardo Lopes — home",
+    "skip": "Skip to content"
+  },
+  "hero": {
+    "line1": "Websites.",
+    "line2": "Built for you.",
+    "description": "Websites and web applications built around your business.",
+    "cta": "Let’s talk",
+    "secondary": "See my work",
+    "role": "Independent web developer",
+    "spooliqLink": "Explore SpoolIQ, my business management software",
+    "loprimLink": "Explore Loprim3D, my online store",
+    "software": "Web application",
+    "shop": "E-commerce",
+    "locality": "La Ciotat and surrounding areas"
+  },
+  "work": {
+    "title": "Selected projects",
+    "intro": "My products, businesses and web projects.",
+    "scroll": "Scroll to explore",
+    "list": "Read without animation",
+    "animated": "Enable transitions",
+    "visit": "Visit website",
+    "source": "View source",
+    "archive": "View archived screenshot",
+    "image": "Project screenshot",
+    "next": "Next project",
+    "previous": "Previous project",
+    "preview": "Project preview",
+    "close": "Close preview",
+    "archived": "Archived project",
+    "navigation": "Explore the projects",
+    "contact": "What could I build for you?"
+  },
+  "projects": {
+    "spooliq": {
+      "description": "An application to manage stock, production and costs for my 3D-printing business.",
+      "alt": "Real SpoolIQ dashboard showing production orders, stock alerts and business activity."
+    },
+    "loprim3d": {
+      "description": "My online store for 3D-printed creations, from catalogue to sale.",
+      "alt": "Loprim3D homepage featuring the MinoZoo collection of articulated animal keyrings."
+    },
+    "photocelos": {
+      "description": "A platform for exploring the heritage of Barcelos through 360-degree panoramic photography.",
+      "alt": "Archived PhotoCelos screenshot, a platform exploring the heritage of Barcelos through 360-degree panoramic photography."
+    },
+    "belofer": {
+      "description": "A website built to introduce a company and its services.",
+      "alt": "Archived screenshot of the Belofer company website."
+    },
+    "tecniwall": {
+      "description": "A website for a construction business.",
+      "alt": "Archived screenshot of Tecniwall’s construction company website."
+    },
+    "tarefas": {
+      "description": "A task-management application built as part of a training course.",
+      "alt": "Screenshot of the Tarefas+ task-management application."
+    },
+    "evently": {
+      "description": "An event-management application built from a tutorial.",
+      "alt": "Evently visual identity from the original repository."
+    },
+    "tempo": {
+      "description": "A personal experiment building a mobile weather application.",
+      "alt": "Historical screenshot of the TempoApp weather application."
+    },
+    "gestao-stocks": {
+      "description": "A web application created to replace manual Excel processes and make inventory management easier in a textile factory.",
+      "alt": "Gestão de Stocks dashboard with warehouse modules and a monthly inventory-entry chart using demonstration data."
+    }
+  },
+  "archive": {
+    "title": "More work",
+    "commercial": "More websites. Less talking.",
+    "commercialNote": "Original versions preserved in the archive.",
+    "experiments": "Experiments & archives",
+    "experimentsNote": "Personal projects and learning exercises.",
+    "expand": "See the projects",
+    "collapse": "Collapse personal projects",
+    "recovered": "Archived applications"
+  },
+  "services": {
+    "title": "Your business. Your tools.",
+    "intro": "One person to work with, from your first idea to launch.",
+    "items": [
+      {
+        "title": "Websites",
+        "text": "Present your business, build trust and make it easy to get in touch."
+      },
+      {
+        "title": "Custom applications",
+        "text": "Simplify your operations with a tool that fits your working day."
+      },
+      {
+        "title": "E-commerce",
+        "text": "Showcase your products and sell them online."
+      }
+    ],
+    "cta": "Let’s discuss what you need"
+  },
+  "approach": {
+    "title": "From idea to launch.",
+    "intro": "You work directly with me, at every step.",
+    "steps": [
+      {
+        "title": "Define",
+        "text": "Your needs, priorities and scope."
+      },
+      {
+        "title": "Design",
+        "text": "Structure, content and interface."
+      },
+      {
+        "title": "Develop",
+        "text": "Build, test and refine."
+      },
+      {
+        "title": "Launch",
+        "text": "Go live and get up to speed."
+      }
+    ]
+  },
+  "about": {
+    "title": "From real work to code.",
+    "name": "Ricardo Lopes",
+    "role": "Ricardo Lopes · Independent developer in France",
+    "body": "Before building applications, I managed a textile warehouse. I started by creating a tool for our stock. Today, I develop for businesses and for my own venture Loprim3D, which led to SpoolIQ.",
+    "portrait": "Illustration of Ricardo Lopes, preserved from the original portfolio"
+  },
+  "contact": {
+    "title": "Your project\ncomes next.",
+    "intro": "A website, an application, an idea. Tell me what you need.",
+    "name": "Your name",
+    "email": "Your email address",
+    "type": "Your project",
+    "description": "What you would like to build",
+    "descriptionHint": "Your business, your needs and your timeline, if you know it.",
+    "choose": "Select a project type",
+    "types": {
+      "website": "A website",
+      "application": "A web application",
+      "shop": "An online store",
+      "redesign": "A redesign or improvement",
+      "other": "A project to explore"
+    },
+    "submit": "Send your enquiry",
+    "sending": "Sending…",
+    "success": "Thank you, your enquiry has been sent. I’ll reply to the email address you provided.",
+    "error": "Your enquiry could not be sent. Please try again or email contact@rlopes.pt.",
+    "required": "Please complete this field.",
+    "invalidEmail": "Enter a valid email address.",
+    "tooShort": "Describe your project in at least 20 characters.",
+    "tooLong": "Your message must contain no more than 5,000 characters.",
+    "invalidType": "Select a project type.",
+    "privacy": "Your details are only used to reply about this project.",
+    "privacyLink": "How your data is used",
+    "honeypot": "Leave this field empty",
+    "alternative": "Or send an email directly",
+    "newMessage": "Send another enquiry",
+    "nojs": "Enable JavaScript to send this form, or contact me directly by email.",
+    "requiredNote": "All fields are required.",
+    "locality": "Based in La Ciotat, I help local businesses and independent professionals bring their web projects to life."
+  },
+  "footer": {
+    "rights": "Independent web development",
+    "legal": "Legal notice",
+    "privacy": "Privacy",
+    "top": "Back to top",
+    "languages": "Languages",
+    "location": "La Ciotat, France"
+  },
+  "legal": {
+    "title": "Legal notice",
+    "intro": "Information about the publisher and hosting of rlopes.pt.",
+    "publisher": "Publisher",
+    "businessType": "Individual entrepreneur · French micro-entrepreneur regime",
+    "director": "Publication director: Ricardo Lopes",
+    "registration": "Registration",
+    "vat": "VAT not applicable under Article 293 B of the French General Tax Code.",
+    "hosting": "Hosting",
+    "hostingNote": "This website is hosted by Netlify. Additional hosting contact details are being verified before production launch.",
+    "intellectual": "Intellectual property",
+    "intellectualBody": "The content and work presented belong to their respective owners. Their inclusion in this portfolio does not transfer any reproduction rights.",
+    "contact": "Business contact",
+    "back": "Return to the website",
+    "verification": "Business details come from Loprim3D’s public legal notice. Their application to this activity must be confirmed before production launch."
+  },
+  "privacy": {
+    "title": "Privacy",
+    "intro": "How your information is used on this website.",
+    "controller": "Data controller",
+    "controllerBody": "Ricardo Lopes EI is responsible for the information submitted through the contact form.",
+    "collection": "Data and purpose",
+    "collectionBody": "The form asks for your name, email address, project type and description. These details are needed to assess and respond to your enquiry, as pre-contractual steps taken at your request. They are not used for a newsletter.",
+    "processing": "Recipients and hosting",
+    "processingBody": "Messages are accessible to Ricardo Lopes and processed through Netlify Forms, the hosting and form provider. Processing may involve transfers outside the European Economic Area, subject to Netlify’s data processing agreement.",
+    "retention": "Retention",
+    "retentionBody": "Enquiries that do not lead to a project are deleted within 12 months of the last exchange. If a contract is agreed, the necessary data is retained in accordance with applicable obligations.",
+    "rights": "Your rights",
+    "rightsBody": "You may request access, correction, deletion or restriction of your data, and portability where applicable. Write to the contact address below. You may also lodge a complaint with the French data protection authority, CNIL.",
+    "cookies": "Cookies and analytics",
+    "cookiesBody": "This site does not include advertising or audience analytics tools. A functional cookie remembers your chosen language for one year. Fonts and images are served from this website.",
+    "provider": "Netlify data processing agreement",
+    "authority": "CNIL website"
+  },
+  "error": {
+    "title": "This page doesn’t exist.",
+    "body": "The link may have changed. Find the projects and services on the homepage.",
+    "home": "Return home",
+    "unexpected": "Something went wrong.",
+    "retry": "Try again"
+  }
+}

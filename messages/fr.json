@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "title": "Développeur web à La Ciotat — Ricardo Lopes",
+    "description": "Création de sites internet et d’applications web pour les entreprises et indépendants de La Ciotat et ses environs. Découvrez les projets de Ricardo Lopes."
+  },
+  "nav": {
+    "label": "Navigation principale",
+    "work": "Projets",
+    "services": "Services",
+    "about": "À propos",
+    "contact": "Parlons de votre projet",
+    "menu": "Ouvrir le menu",
+    "close": "Fermer le menu",
+    "language": "Choisir la langue",
+    "home": "Ricardo Lopes — accueil",
+    "skip": "Aller au contenu"
+  },
+  "hero": {
+    "line1": "Du web.",
+    "line2": "Sur mesure.",
+    "description": "Des sites web et des applications pour votre activité.",
+    "cta": "Parlons projet",
+    "secondary": "Voir les projets",
+    "role": "Développeur web indépendant",
+    "spooliqLink": "Découvrir SpoolIQ, mon logiciel de gestion",
+    "loprimLink": "Découvrir Loprim3D, ma boutique en ligne",
+    "software": "Application web",
+    "shop": "E-commerce",
+    "locality": "La Ciotat et ses environs"
+  },
+  "work": {
+    "title": "Une sélection de projets",
+    "intro": "Mes produits, mes entreprises, mes réalisations.",
+    "scroll": "Faites défiler pour explorer",
+    "list": "Lire sans animation",
+    "animated": "Activer les transitions",
+    "visit": "Visiter le site",
+    "source": "Voir le code",
+    "archive": "Voir la capture archivée",
+    "image": "Capture du projet",
+    "next": "Projet suivant",
+    "previous": "Projet précédent",
+    "preview": "Aperçu du projet",
+    "close": "Fermer l’aperçu",
+    "archived": "Projet archivé",
+    "navigation": "Explorer les projets",
+    "contact": "Et pour votre activité ?"
+  },
+  "projects": {
+    "spooliq": {
+      "description": "Une application pour gérer les stocks, la production et les coûts de mon activité d’impression 3D.",
+      "alt": "Tableau de bord réel de SpoolIQ : commandes de production, alertes de stock et suivi de l’activité."
+    },
+    "loprim3d": {
+      "description": "Ma boutique en ligne de créations imprimées en 3D, du catalogue à la vente.",
+      "alt": "Page d’accueil de Loprim3D présentant la collection de porte-clés articulés MinoZoo."
+    },
+    "photocelos": {
+      "description": "Une plateforme pour découvrir le patrimoine de Barcelos à travers des photographies panoramiques à 360°.",
+      "alt": "Capture archivée de PhotoCelos, une plateforme sur le patrimoine de Barcelos avec des photographies panoramiques à 360°."
+    },
+    "belofer": {
+      "description": "Un site vitrine conçu pour présenter une entreprise et ses services.",
+      "alt": "Capture archivée du site de présentation de Belofer."
+    },
+    "tecniwall": {
+      "description": "Site pour une entreprise du bâtiment.",
+      "alt": "Capture archivée du site de Tecniwall, entreprise de construction."
+    },
+    "tarefas": {
+      "description": "Une application de gestion de tâches réalisée dans le cadre d’un cours.",
+      "alt": "Capture de l’application de gestion de tâches Tarefas+."
+    },
+    "evently": {
+      "description": "Une application de gestion d’événements réalisée à partir d’un tutoriel.",
+      "alt": "Identité visuelle Evently issue du dépôt d’origine."
+    },
+    "tempo": {
+      "description": "Une expérimentation personnelle d’application météo pour mobile.",
+      "alt": "Capture historique de l’application météo TempoApp."
+    },
+    "gestao-stocks": {
+      "description": "Une application web conçue pour remplacer les processus manuels sous Excel et faciliter la gestion des stocks dans une usine textile.",
+      "alt": "Tableau de bord de Gestão de Stocks avec les modules d’entrepôt et un graphique des entrées mensuelles, utilisant des données de démonstration."
+    }
+  },
+  "archive": {
+    "title": "Autres réalisations",
+    "commercial": "D’autres sites, en images.",
+    "commercialNote": "Versions d’origine conservées en archive.",
+    "experiments": "Expérimentations & archives",
+    "experimentsNote": "Projets personnels et exercices d’apprentissage.",
+    "expand": "Voir les projets",
+    "collapse": "Replier les projets personnels",
+    "recovered": "Applications en archive"
+  },
+  "services": {
+    "title": "Votre activité. Vos outils.",
+    "intro": "Un seul interlocuteur, de votre idée à la mise en ligne.",
+    "items": [
+      {
+        "title": "Sites web",
+        "text": "Présenter votre activité, donner confiance et faciliter le contact."
+      },
+      {
+        "title": "Applications sur mesure",
+        "text": "Simplifier votre gestion avec un outil adapté à votre quotidien."
+      },
+      {
+        "title": "E-commerce",
+        "text": "Présenter vos produits et les vendre en ligne."
+      }
+    ],
+    "cta": "Parlons de vos besoins"
+  },
+  "approach": {
+    "title": "De l’idée à la mise en ligne.",
+    "intro": "Vous échangez directement avec moi.",
+    "steps": [
+      {
+        "title": "Cadrer",
+        "text": "Vos besoins, vos priorités, le périmètre."
+      },
+      {
+        "title": "Concevoir",
+        "text": "Structure, contenu et interface."
+      },
+      {
+        "title": "Développer",
+        "text": "Construction, tests et ajustements."
+      },
+      {
+        "title": "Lancer",
+        "text": "Mise en ligne et prise en main."
+      }
+    ]
+  },
+  "about": {
+    "title": "Du terrain au code.",
+    "name": "Ricardo Lopes",
+    "role": "Ricardo Lopes · Développeur indépendant en France",
+    "body": "Avant de développer des applications, je gérais un entrepôt textile. J’ai commencé par créer un outil pour nos stocks. Aujourd’hui, je développe pour les entreprises et pour mon activité Loprim3D, à l’origine de SpoolIQ.",
+    "portrait": "Illustration de Ricardo Lopes, issue du portfolio original"
+  },
+  "contact": {
+    "title": "La suite,\nc’est votre projet.",
+    "intro": "Un site, une application, une idée. Dites-moi ce dont vous avez besoin.",
+    "name": "Votre nom",
+    "email": "Votre adresse e-mail",
+    "type": "Votre projet",
+    "description": "Ce que vous souhaitez construire",
+    "descriptionHint": "Votre activité, votre besoin et votre délai éventuel.",
+    "choose": "Sélectionnez un type de projet",
+    "types": {
+      "website": "Un site web",
+      "application": "Une application web",
+      "shop": "Une boutique en ligne",
+      "redesign": "Une refonte ou une amélioration",
+      "other": "Un projet à préciser"
+    },
+    "submit": "Envoyer votre demande",
+    "sending": "Envoi en cours…",
+    "success": "Merci, votre demande a été envoyée. Je vous répondrai à l’adresse indiquée.",
+    "error": "Votre demande n’a pas pu être envoyée. Réessayez ou contactez-moi par e-mail à contact@rlopes.pt.",
+    "required": "Veuillez remplir ce champ.",
+    "invalidEmail": "Saisissez une adresse e-mail valide.",
+    "tooShort": "Décrivez votre projet en au moins 20 caractères.",
+    "tooLong": "Votre message doit contenir au maximum 5 000 caractères.",
+    "invalidType": "Sélectionnez un type de projet.",
+    "privacy": "Vos informations servent uniquement à vous répondre au sujet de ce projet.",
+    "privacyLink": "Comment vos données sont utilisées",
+    "honeypot": "Ne pas remplir ce champ",
+    "alternative": "Ou directement par e-mail",
+    "newMessage": "Envoyer une autre demande",
+    "nojs": "Activez JavaScript pour envoyer le formulaire, ou contactez-moi directement par e-mail.",
+    "requiredNote": "Tous les champs sont nécessaires.",
+    "locality": "Basé à La Ciotat, j’accompagne les entreprises et indépendants des environs dans leurs projets web."
+  },
+  "footer": {
+    "rights": "Développement web indépendant",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité",
+    "top": "Retour en haut",
+    "languages": "Langues",
+    "location": "La Ciotat, France"
+  },
+  "legal": {
+    "title": "Mentions légales",
+    "intro": "Informations relatives à l’éditeur et à l’hébergement de rlopes.pt.",
+    "publisher": "Éditeur",
+    "businessType": "Entrepreneur individuel · Régime micro-entrepreneur",
+    "director": "Directeur de la publication : Ricardo Lopes",
+    "registration": "Immatriculation",
+    "vat": "TVA non applicable, article 293 B du Code général des impôts.",
+    "hosting": "Hébergement",
+    "hostingNote": "Ce site est hébergé par Netlify. Les coordonnées complémentaires de l’hébergeur sont en cours de vérification avant la mise en production.",
+    "intellectual": "Propriété intellectuelle",
+    "intellectualBody": "Les contenus et réalisations présentés appartiennent à leurs titulaires respectifs. Leur présentation dans ce portfolio ne transfère aucun droit de reproduction.",
+    "contact": "Contact professionnel",
+    "back": "Revenir au site",
+    "verification": "Les informations d’entreprise proviennent des mentions légales publiques de Loprim3D. Leur application à cette activité doit être confirmée avant la mise en production."
+  },
+  "privacy": {
+    "title": "Confidentialité",
+    "intro": "Les informations utiles pour comprendre l’utilisation de vos données sur ce site.",
+    "controller": "Responsable du traitement",
+    "controllerBody": "Ricardo Lopes EI est responsable des données transmises via le formulaire de contact.",
+    "collection": "Données et finalité",
+    "collectionBody": "Le formulaire demande votre nom, votre adresse e-mail, le type de projet et sa description. Ces informations sont nécessaires pour étudier votre demande et y répondre, dans le cadre de mesures précontractuelles prises à votre initiative. Elles ne sont pas utilisées pour une newsletter.",
+    "processing": "Destinataires et hébergement",
+    "processingBody": "Les messages sont accessibles à Ricardo Lopes et traités par Netlify Forms, prestataire d’hébergement et de gestion du formulaire. Le traitement peut impliquer des transferts hors de l’Espace économique européen, encadrés par l’accord de traitement des données de Netlify.",
+    "retention": "Conservation",
+    "retentionBody": "Les demandes sans suite sont supprimées au plus tard 12 mois après le dernier échange. Si un contrat est conclu, les données nécessaires sont conservées selon les obligations applicables.",
+    "rights": "Vos droits",
+    "rightsBody": "Vous pouvez demander l’accès, la rectification, l’effacement ou la limitation de vos données, ainsi que leur portabilité lorsque ce droit s’applique. Écrivez à l’adresse de contact ci-dessous. Vous pouvez aussi adresser une réclamation à la CNIL.",
+    "cookies": "Cookies et mesure d’audience",
+    "cookiesBody": "Ce site n’intègre pas d’outil publicitaire ni d’analyse d’audience. Un cookie fonctionnel mémorise la langue que vous choisissez pendant un an. Les polices et les images sont servies depuis le site.",
+    "provider": "Accord de traitement des données Netlify",
+    "authority": "Site de la CNIL"
+  },
+  "error": {
+    "title": "Cette page n’existe pas.",
+    "body": "Le lien a peut-être changé. Retrouvez les projets et les services sur la page d’accueil.",
+    "home": "Revenir à l’accueil",
+    "unexpected": "Un problème est survenu.",
+    "retry": "Réessayer"
+  }
+}
