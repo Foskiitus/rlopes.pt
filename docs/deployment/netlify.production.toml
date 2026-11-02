@@ -1,0 +1,30 @@
+# FUTURE CONFIGURATION ONLY: replace root netlify.toml after explicit approval.
+# All branches containing the migrated application use Next.js.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Netlify automatically applies its supported OpenNext adapter.
+# Keep master as the production branch in the dashboard.
+[context.production.environment]
+  NEXT_PUBLIC_DEPLOY_CONTEXT = "production"
+[context.deploy-preview.environment]
+  NEXT_PUBLIC_DEPLOY_CONTEXT = "deploy-preview"
+
+[context.branch-deploy.environment]
+  NEXT_PUBLIC_DEPLOY_CONTEXT = "branch-deploy"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/__forms.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

@@ -4,6 +4,8 @@ export const routing = defineRouting({
   defaultLocale: "fr",
   localePrefix: "always",
   localeDetection: false,
+  // LocaleSwitcher alone persists an explicit choice; visits must not set cookies.
+  localeCookie: false,
   alternateLinks: false,
 });
 export type Locale = (typeof routing.locales)[number];

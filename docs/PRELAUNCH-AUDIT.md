@@ -1,6 +1,8 @@
 # Portfolio V2.5 — auditoria antes do lançamento
 
-**Decisão: READY FOR PREVIEW**
+> **Atualização RC — 2 de novembro de 2026:** estado atual **OWNER ACTION REQUIRED**, conforme [V2-FINAL-RELEASE.md](V2-FINAL-RELEASE.md) e [LAUNCH.md](LAUNCH.md). A revisão final passou TypeScript, lint, builds/SEO de produção e preview, **62 testes**, **45 vistas** e **18 scans Axe**. Identidade foi cruzada com fontes oficiais; telefone Netlify, adoção da retenção, configurações privadas e entrega real Forms continuam pendentes. A configuração futura está preparada num artefacto inativo. O preview público já foi inspecionado; as limitações de acesso anteriores abaixo pertencem à auditoria original. Lighthouse e npm audit abaixo são históricos, não repetidos nesta passagem. Este documento conserva os resultados da auditoria original; o relatório final prevalece para decisões de lançamento.
+
+**Decisão histórica desta auditoria: READY FOR PREVIEW**
 
 Auditoria local realizada em 1–2 de novembro de 2026. Branch: `v2`. Skills aplicados: `security-audit` e Impeccable, no âmbito de revisão técnica. A orientação visual aprovada foi preservada.
 

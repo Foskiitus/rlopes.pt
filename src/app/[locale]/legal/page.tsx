@@ -46,11 +46,15 @@ export default async function Legal({
           <br />
           {business.address}
         </p>
+        <p>{t("establishment")}</p>
         <p>{t("director")}</p>
       </section>
       <section>
         <h2>{t("registration")}</h2>
         <p>SIREN : {business.siren}</p>
+        <p>
+          {business.register} — {business.siren}
+        </p>
         <p>{t("vat")}</p>
       </section>
       <section>
@@ -73,6 +77,19 @@ export default async function Legal({
       <section>
         <h2>{t("intellectual")}</h2>
         <p>{t("intellectualBody")}</p>
+      </section>
+      <section>
+        <h2>{t("responsibility")}</h2>
+        <p>{t("responsibilityBody")}</p>
+      </section>
+      <section>
+        <h2>{t("dataProtection")}</h2>
+        <p>{t("dataProtectionBody")}</p>
+        <a href={"/" + locale + "/privacy"}>{t("privacyLink")}</a>
+      </section>
+      <section>
+        <h2>{t("law")}</h2>
+        <p>{t("lawBody")}</p>
       </section>
       {!business.registrationScopeConfirmed && (
         <p className="legal-notice">{t("verification")}</p>

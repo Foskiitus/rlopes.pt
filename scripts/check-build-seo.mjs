@@ -7,6 +7,21 @@ assert.ok(
   "Usage: node scripts/check-build-seo.mjs preview|production",
 );
 const root = ".next/server/app/";
+const routes = JSON.parse(readFileSync(".next/routes-manifest.json", "utf8"));
+const previewHeader = routes.headers.some(
+  (rule) =>
+    rule.source === "/:path*" &&
+    rule.headers.some(
+      (header) =>
+        header.key.toLowerCase() === "x-robots-tag" &&
+        /noindex/.test(header.value),
+    ),
+);
+assert.equal(
+  previewHeader,
+  mode === "preview",
+  "Preview HTTP header must not leak into production",
+);
 const origin = "https://rlopes.pt";
 const locales = ["fr", "pt", "en"];
 const paths = ["", "/legal", "/privacy"];
@@ -86,7 +101,9 @@ if (mode === "production") {
   assert.match(robots, /^Disallow: \/__forms\.html$/m);
   assert.doesNotMatch(robots, /^Disallow: \/$/m);
 } else {
-  assert.match(robots, /^Disallow: \/$/m);
+  // Crawlers must be able to read the noindex metadata and HTTP header.
+  assert.match(robots, /^Allow: \/$/m);
+  assert.doesNotMatch(robots, /^Disallow: \/$/m);
 }
 assert.match(
   readFileSync("public/__forms.html", "utf8"),

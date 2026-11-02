@@ -1,122 +1,66 @@
 # Portfolio V2.5 — preparação do lançamento
 
-Atualizado em 2 de novembro de 2026. Estado: **READY FOR PREVIEW**. Consultar [a auditoria](PRELAUNCH-AUDIT.md) para resultados e limitações.
+Atualizado em **2 de novembro de 2026**. Estado: **OWNER ACTION REQUIRED**.
 
-A branch de trabalho é `v2`. O checkpoint local da implementação aprovada é `792f529`; as correções da auditoria ficam num commit separado. `master` mantém-se em `d4b41e8`. Não houve push, merge, alteração da conta Netlify ou deployment. A consulta pública do GitHub não encontrou um PR aberto de `v2`; não foi disponibilizado um URL de preview nem acesso ao projeto Netlify. Isto não prova que não exista um branch deploy na conta.
+O [relatório final](V2-FINAL-RELEASE.md) é a referência atual: fontes legais, observações locais/remotas, retenção, formulário, migração e rollback. A [auditoria anterior](PRELAUNCH-AUDIT.md) conserva medições históricas; a [auditoria RGPD/CNIL](GDPR-COOKIE-AUDIT.md) detalha cookies e tratamentos.
 
-## A — Bloqueios antes de substituir a produção
+Trabalho apenas em `v2`. `master` permanece em `d4b41e8`, com Vite. O preview público foi consultado em `https://v2--deft-frangipane-131671.netlify.app`; produção `https://rlopes.pt` permanece intacta. Não houve push, merge, deployment, alteração de DNS ou configurações remotas. As correções locais ainda precisam de publicação autorizada para chegar ao preview.
 
-- [ ] **Identidade e registo:** confirmar o nome civil completo com a designação EI, a domiciliação profissional, o telefone, o SIREN e a inscrição RNE/RCS aplicável à atividade de desenvolvimento. Os dados existentes provêm das páginas públicas da Loprim3D; estas usam duas formas do nome. Confirmar também a aplicação do regime microempreendedor e da declaração de IVA apresentada. Completar as menções aplicáveis com dados autorizados, sem inventar SIRET ou número de IVA.
-- [ ] **Alojamento:** obter o telefone oficial da Netlify. A morada foi confirmada nos [termos oficiais, secção 15](https://www.netlify.com/legal/terms-of-use/): 101 2nd Street, San Francisco, CA 94105, United States. O telefone continua `null` e a página de preview assinala a verificação pendente.
-- [ ] **Privacidade operacional:** confirmar e aplicar a política proposta de eliminação de pedidos sem seguimento até 12 meses após o último contacto. Abranger Netlify Forms e as caixas de correio utilizadas. Este prazo é uma decisão do responsável, não uma obrigação legal universal. Rever o DPA, os fornecedores de email, os subprocessadores e as transferências internacionais da configuração efetivamente utilizada.
-- [ ] **Contacto real:** observar uma submissão do preview no painel Netlify, a notificação através de `contact@rlopes.pt` e o Reply-To correto. Os testes locais não demonstram receção pela plataforma ou entrega de email.
-- [ ] **Se houver clientes consumidores:** confirmar a adesão e as menções do mediador de consumo aplicável. A ausência de pagamento online, por si só, não afasta esta obrigação. Para atividade exclusivamente B2B, documentar essa situação. Ver [orientação oficial do Ministério da Economia](https://www.economie.gouv.fr/mediation-conso/vous-etes-un-professionnel/vos-principales-obligations-0).
+## Antes de aprovar produção
 
-As exigências de identificação e alojamento são descritas no [Service Public](https://entreprendre.service-public.gouv.fr/vosdroits/F37351?lang=fr). As informações de recolha e direitos seguem a [orientação da CNIL](https://www.cnil.fr/fr/informer-les-personnes). Esta checklist não certifica conformidade jurídica.
+- [ ] Confirmar nome civil completo, domiciliação profissional, telefone, registo atual e regime microempreendedor/IVA. Loprim3D, API oficial e BODACC foram cruzados; o BODACC inclui um prenome adicional. Fontes e diferenças estão no relatório final. Confirmar âmbito B2C/mediação se aplicável.
+- [ ] Completar telefone oficial da Netlify. Nome/morada confirmados nos [termos oficiais, secção 15](https://www.netlify.com/legal/terms-of-use/); não inventar contacto.
+- [ ] Adotar e executar a rotina manual de retenção proposta: pedidos sem projeto até 12 meses após último contacto substantivo, revisão mensal que respeite o prazo, email/Netlify Forms/spam/exportações/cópias. Clientes seguem necessidades contratuais e legais próprias. Procedimento completo na secção 3 do relatório final; não está implementado nem automatizado.
+- [ ] Verificar Analytics/Web Analytics, snippets, Session Replay, pixels, plugins, webhooks, log drains, DPA/email/transferências e retenção de logs no painel. Estado privado continua desconhecido; não presumir desativação.
+- [ ] Confirmar deteção e entrega Forms com o teste acompanhado abaixo.
+- [ ] Rever logs da resposta 500 isolada em `/pt/privacy` observada em 02/11/2026, captura iniciada às 19:21 UTC. Visita no browser e cinco retestes deram 200; causa não estabelecida.
+- [ ] Levar a mudança global Next.js para a configuração de produção **antes** do merge autorizado; `[context.v2]` não se aplica a `master`.
 
-Só depois da confirmação factual, atualizar `registrationScopeConfirmed` e `retentionPolicyConfirmed` em `src/data/site.ts` e completar o telefone do alojamento. Executar `npm run check:production`: o código de saída 1 atual é esperado. Este comando verifica apenas os campos pendentes no repositório; não substitui os restantes pontos desta lista.
+Só após confirmação factual atualizar `registrationScopeConfirmed`, `retentionPolicyConfirmed`, telefone do alojamento e textos FR/PT/EN. `npm run check:production` devolve atualmente **1 esperado**. É uma verificação limitada de campos locais; mesmo depois de passar não substitui validação operacional/jurídica.
 
-## B — Verificações e decisões do proprietário
+## Configuração atual: produção antiga protegida
 
-- [ ] Autorizar explicitamente o push e a criação de um preview. A autorização desta auditoria abrange commits locais, não publicação.
-- [ ] Confirmar no painel que a branch de produção continua `master` e que previews estão permitidos. Preservar o publish global `dist` da produção Vite; no log de `v2`, confirmar a leitura de `netlify.toml` do commit correto e o publish `.next` de `[context.v2]`, sem fallback SPA.
-- [ ] Confirmar receção e encaminhamento do alias `contact@rlopes.pt` no fornecedor de email. A caixa pessoal de destino deve permanecer apenas nas definições privadas desse fornecedor.
-- [ ] Validar o formulário e as notificações com o procedimento abaixo; verificar quotas, spam e o estado da conta.
-- [ ] Rever o site num telemóvel real, incluindo Safari/iOS, teclado aberto, seleção de idioma, zoom, foco e movimento reduzido. Os testes desta auditoria usam Chrome com emulação e gestos sintetizados.
-- [ ] Confirmar manualmente o perfil LinkedIn original; a inspeção automatizada recebeu HTTP 999, que não demonstra um link quebrado.
-- [ ] Autorizar separadamente a promoção para produção, depois de resolver A e validar o preview.
+O `netlify.toml` ativo mantém `[build]` com `npm run build` e `dist`. Apenas `[context.v2]` substitui publish por `.next`, com Node 22 em `[context.v2.environment]`. A `master` real continua sem este ficheiro, com Vite e definições existentes do painel. Não alterar publish global da conta para corrigir preview.
 
-## C — Melhorias opcionais
+O Next.js atual não usa `distDir` ou export estático. `.next` contém output interno que o adaptador Netlify/OpenNext processa; não basta publicar os ficheiros `server`, `cache` e manifests como website estático. Não usar fallback `/* /index.html 200`, servidor personalizado ou adaptador legado fixado.
 
-- Investigar LCP móvel abaixo de 2,5 s sem degradar a imagem principal. O resultado local atual e as condições de medição constam da auditoria; não há dados reais de utilizadores.
-- Atualizar as ferramentas de lint quando houver uma solução compatível para [GHSA-g3hv-75wg-m249](https://github.com/advisories/GHSA-g3hv-75wg-m249). O aviso está nas dependências de desenvolvimento; não executar `npm audit fix --force` nem impor minimatch 11 às dependências que exigem a API 3.
-- Ampliar cobertura Firefox/WebKit e testes com leitor de ecrã. Uma futura CSP deve começar com avaliação de compatibilidade/report-only, não com regras copiadas que bloqueiem a hidratação do Next.js.
+A resolução oficial offline confirmou atual `v2` → `.next`/Node 22, e produção simulada com ficheiro atual → `dist`. O [ficheiro futuro](deployment/netlify.production.toml) resolve `.next`/Node 22 em production, branch-deploy e deploy-preview. **Está inativo:** não substituir `netlify.toml` agora. O [relatório final, secções 5 e 8](V2-FINAL-RELEASE.md) descreve a ativação em commit separado aprovado.
 
-## Criar um preview após autorização
+`next build` e resolução offline não validam empacotamento OpenNext ou post-processing remoto. No próximo deploy autorizado confirmar commit, branch/contexto, ficheiro carregado, build, publish, Node, versão do adaptador e logs. Valores do [ficheiro prevalecem sobre UI](https://docs.netlify.com/build/configure-builds/file-based-configuration/).
 
-1. Rever `git status` e os commits locais em `v2`. Após autorização para publicar, fazer push e abrir PR para `master`, sem merge.
-2. No projeto Netlify existente, confirmar a branch de produção e as regras de Deploy Previews. Um branch deploy de `v2` é alternativa; não associar `rlopes.pt` a esse preview.
-3. Confirmar a branch `v2`, `npm run build`, publish `.next`, Node 22 e o adaptador OpenNext automático no log. O comando e o publish devem indicar origem `config`, através de `[context.v2]`. A aplicação usa Next.js 16.4.3 e não precisa de servidor personalizado, base de dados ou adaptador legado fixado.
-4. Ativar deteção de formulários antes do build autorizado. Confirmar o blueprint e `project-enquiry` no artefacto estático/painel.
-5. Abrir o URL devolvido pelo deployment e repetir as verificações de rotas, imagens, animação, formulário e SEO. A execução local de `next build` não gera nem valida o pacote final do adaptador Netlify.
+O erro 401 de `netlify-purge-cloudflare-on-deploy` é separado. Rever necessidade/credenciais privadamente; considerar exclusão de previews apenas se suportada e após avaliar impacto. Não alterar plugin partilhado, DNS ou proxy sem autorização.
 
-Configuração conferida com [Next.js na Netlify](https://docs.netlify.com/build/frameworks/framework-setup-guides/nextjs/overview/) e [OpenNext Forms](https://opennext.js.org/netlify/forms), consultados durante a auditoria de 1–2 de novembro de 2026. Não foram alteradas definições remotas.
+## Forms e notificações: validação obrigatória
 
-## Isolamento do deployment de `v2`
+Blueprint `public/__forms.html`, nome `project-enquiry`, honeypot e `POST /__forms.html` preservados. Envio `application/x-www-form-urlencoded` com `form-name`, `bot-field`, `locale`, `name`, `email`, `project-type`, `message`. Endpoint fora do proxy de idiomas. Não basta colocar atributos num componente React.
 
-O diagnóstico comunicado pelo proprietário mostrou `npm run build`, publish `dist`, base `/` e HTTP 404, com `server`, `cache` e `build-manifest.json` no File Explorer. Estes são artefactos internos do Next.js, não um website estático pronto a servir. O código local não define `distDir` nem `output: "export"`: `next build` gera `.next`, que precisa do adaptador OpenNext para preparar funções, rotas e ficheiros públicos.
+1. Confirmar/ativar deteção em **Forms → Form detection**, se necessário e autorizado. A definição é partilhada pelo projeto. O anterior `Skipping form detection` não prova deteção ativa; GET 200 do blueprint também não.
+2. Gerar novo preview autorizado após ativação; confirmar log e formulário/campos no painel. Deteção não é retroativa.
+3. Em **Forms → Submission notifications**, configurar/verificar destinatário **contact@rlopes.pt**. Confirmar alias no fornecedor privado. O email apresentado no website não altera a notificação; `netlify.toml` não contém destinatário. Não publicar encaminhamento pessoal nem alterar projeto Loprim3D.
+4. Enviar **uma** submissão `TESTE PREVIEW V2.5` com email controlado pelo proprietário e mensagem de teste. Não guardar esse endereço no repositório. Anotar hora/URL.
+5. Confirmar sucessivamente HTTP real, registo no painel, campos, notificação recebida e Reply-To para o visitante de teste. Se faltar, rever spam/quotas/logs/deteção antes de repetir.
+6. Confirmar feedback e possibilidade de novo pedido; eliminar dados de teste na Netlify/email após validação.
 
-Antes desta correção, o `netlify.toml` local já definia `.next` e Node 22 globalmente. A diferença relativamente ao deployment observado não pode ser explicada só pelos valores do painel: [as definições do ficheiro prevalecem sobre as da UI](https://docs.netlify.com/build/configure-builds/file-based-configuration/). No próximo build autorizado, confirmar o commit, a branch, o caminho do ficheiro de configuração, o contexto e a configuração resolvida. Se continuar a resolver `dist` para `v2`, investigar por que não está a carregar este ficheiro/contexto; não mudar o publish global da produção.
+**Estado atual:** estrutura e simulações aprovadas; POST real, deteção no painel, registo e email não verificados. Playwright interceta pedidos, não envia mensagens. `next start` não processa Netlify Forms. Referências: [setup](https://docs.netlify.com/manage/forms/setup/), [notificações](https://docs.netlify.com/manage/forms/notifications/), [OpenNext Forms](https://opennext.js.org/netlify/forms).
 
-A correção conserva `npm run build` e `dist` em `[build]`. Apenas `[context.v2]` substitui o publish por `.next`, com Node 22 em `[context.v2.environment]`. Os contextos de preview mantêm os indicadores de não indexação. Não há fallback para `/index.html`, configuração de exportação estática ou adaptador legado fixado. O [OpenNext recomenda `.next` e deteção automática do framework](https://opennext.js.org/netlify).
+## SEO, idiomas e cookies
 
-Validação local com o resolvedor oficial `@netlify/config@25.5.2`, em modo `--offline`, sem consultar nem alterar a conta:
+- `/` abre FR ou a escolha explícita guardada; `/fr`, `/pt`, `/en` funcionam diretamente. Redirects permanentes antigos preservados; sem fallback SPA.
+- Canonicals, Open Graph, hreflang e sitemap usam `https://rlopes.pt`; PT usa `pt-PT`. Sitemap contém nove páginas.
+- Preview local: metadados/header `noindex, nofollow` com robots `Allow: /` para permitir leitura de noindex. O antigo `Disallow: /` impedia essa leitura; ver [orientação Google](https://developers.google.com/search/docs/crawling-indexing/block-indexing).
+- Produção compilada: `index, follow`, sem header noindex geral, robots crawlable; blueprint mantém exclusão própria. Reconfirmar HTTP no deploy real: `next start` não aplica os headers de `netlify.toml`.
+- `CONTEXT` prevalece sobre `NEXT_PUBLIC_DEPLOY_CONTEXT`; apenas production ativa indexação. Metadados são decididos no build, não ao mudar variáveis de um servidor já compilado.
+- Noindex não controla acesso. Se preview precisar de privacidade, avaliar proteção do host separadamente.
+- Nenhum tracker não essencial encontrado; sem banner. Cookie `NEXT_LOCALE` apenas por escolha explícita, até um ano; navegar não o renova. Painel privado ainda pendente.
 
-| Branch simulada | Contexto | Build | Publish resolvido | Node definido pelo ficheiro |
-| --- | --- | --- | --- | --- |
-| `v2` | `branch-deploy` | `npm run build` | `.next` | `22` |
-| `v2` | `deploy-preview` | `npm run build` | `.next` | `22` |
-| `master` | `production` | `npm run build` | `dist` | nenhum |
+## Verificação local e publicação futura
 
-Esta comparação aplica o ficheiro atual aos três contextos; não é uma leitura da configuração remota. A `master` real permanece em `d4b41e8`, sem `netlify.toml`, com o seu build Vite e as definições existentes do painel. Nenhum ficheiro dessa branch nem configuração da conta foi alterado. A validação offline também não executa o adaptador nem o post-processing da Netlify.
+Com Node 22, executar typecheck/lint, build com `CONTEXT=production` e `node scripts/check-build-seo.mjs production`; depois build com `CONTEXT=branch-deploy`, verificador `preview`, `npm test` e `npm run check:production`. Comandos PowerShell completos no relatório final. Resultados atuais: **62 testes, 45 vistas, 18 scans Axe**, dois builds e ambos os contextos SEO aprovados. Lighthouse 96/LCP 2,807 s/CLS 0 são medições históricas, não refeitas nesta passagem.
 
-O erro 401 do plugin de limpeza Cloudflare é separado desta correção. Não existe configuração desse plugin no repositório; verificar a instalação e as credenciais privadas no painel numa intervenção própria, sem alterar agora os plugins ou definições globais que servem a produção.
+Após fechar as pendências, preparar o commit da configuração global Next.js e repetir validações. Obter autorização para push/preview, validar deployment e Forms, e **autorização separada** para merge/promoção de `master`. Manter domínio/DNS/branch de produção. Não presumir que o ficheiro ativo específico de `v2` funcionará em `master`.
 
-`Skipping form detection` significa que a deteção não foi executada naquele deployment. O blueprint e o POST estático já seguem a integração OpenNext; confirmar **Forms → Form detection → Enable form detection** antes de um novo deployment autorizado. Esta é uma definição do projeto, não uma definição isolada de `[context.v2]`, e não foi alterada. A deteção real e a entrega de notificações continuam por validar no preview, seguindo o procedimento abaixo.
+Antes da migração, registar o deploy Vite funcional para rollback. Se necessário, republicar esse artefacto existente mediante autorização, sem reconstrução com configuração Next.js; rever publicações automáticas que o possam substituir. Preservar histórico, recursos antigos e dados Forms; eventual revert de Git deve ser revisto, sem reset/force-push. Plano exato no relatório final.
 
-## Formulário e notificações — verificação obrigatória no preview
+## Verificações complementares
 
-O formulário mantém `POST /__forms.html`, `Content-Type: application/x-www-form-urlencoded` e sete campos: `form-name`, `bot-field`, `locale`, `name`, `email`, `project-type`, `message`. O nome é `project-enquiry`. `public/__forms.html` é o blueprint estático com `data-netlify="true"` e honeypot; atributos colocados apenas num componente React não bastam. O endpoint está fora do proxy de idiomas.
-
-1. Ativar a deteção em **Forms**, depois gerar o preview autorizado. A deteção não é retroativa. Confirmar o formulário e os sete campos.
-2. Em **Forms → Submission notifications**, criar/editar a notificação por email de `project-enquiry`, com destinatário **contact@rlopes.pt**. Não alterar as notificações do projeto separado Loprim3D.
-3. Enviar no preview um pedido claramente identificado, por exemplo nome “TESTE PREVIEW V2.5” e uma mensagem explicando que é uma verificação autorizada. Usar um email controlado pelo proprietário, sem o guardar em fixtures ou relatórios públicos.
-4. Confirmar o registo em Netlify Forms e os valores dos campos. Se não aparecer, consultar spam, deteção, logs e quotas.
-5. Confirmar a notificação recebida através do alias profissional, incluindo a pasta de spam. O campo do visitante `name="email"` fornece Reply-To; não define o destinatário da notificação.
-6. Verificar no cliente de email que uma resposta se dirige ao endereço de teste do visitante. Não publicar cabeçalhos da mensagem nem o destinatário privado do encaminhamento.
-7. Testar erro de rede/repetição, navegação por teclado, mensagem de sucesso, novo pedido e contacto direto. Eliminar os dados de teste do painel e das caixas de correio após a validação.
-
-O endereço visível não configura notificações. `netlify.toml` não contém destinatário. Referências: [deteção e envio](https://docs.netlify.com/manage/forms/setup/) e [notificações](https://docs.netlify.com/manage/forms/notifications/).
-
-A validação cliente facilita o preenchimento; não é validação de servidor personalizada. A filtragem de spam/honeypot pertence à plataforma. Em `next start`, um POST real não é processado pelo Netlify Forms. Playwright interceta esses pedidos; a auditoria não enviou emails nem confirmou entrega real.
-
-## Indexação, rotas e ambiente
-
-- Canonicals, Open Graph e sitemap usam sempre `https://rlopes.pt`, em FR/PT/EN; o português usa `pt-PT`.
-- `/` usa francês ou a escolha explícita guardada. `/portfolio` redireciona permanentemente para `/pt#work`; os equivalentes localizados preservam o idioma.
-- O sitemap contém nove páginas: homepage, legal e privacidade em cada idioma.
-- `isPreview()` lê `CONTEXT` antes de `NEXT_PUBLIC_DEPLOY_CONTEXT`. Só `production` ativa indexação. `netlify.toml` define o fallback dos previews e branch deploys. Não definir uma variável global de preview que substitua o contexto correto do build.
-- Os metadados estáticos são decididos no build. Uma mudança de contexto exige reconstrução; não basta mudar a variável em `next start`.
-- O blueprint tem `noindex,nofollow`; propostas de design, `.env` e `.git` não são rotas públicas. `noindex` não constitui controlo de acesso; usar proteção de acesso do host se o preview tiver de ser privado.
-- Confirmar no preview HTTPS os headers configurados (`nosniff`, Referrer-Policy, Permissions-Policy, X-Robots-Tag do blueprint), porque `next start` não aplica `netlify.toml`.
-
-Verificação local reproduzível, com Node 22:
-
-```sh
-npm ci
-npm run typecheck
-npm run lint
-npm run build
-node scripts/check-build-seo.mjs preview
-npm test
-npm audit --omit=dev
-npm audit
-npm run check:production
-```
-
-Para testar exclusivamente o contexto de produção em PowerShell:
-
-```powershell
-$env:CONTEXT = 'production'
-npm run build
-node scripts/check-build-seo.mjs production
-Remove-Item Env:CONTEXT
-npm run build
-node scripts/check-build-seo.mjs preview
-```
-
-Os dois últimos comandos restauram um build local não indexável. As medições e capturas da auditoria estão em `.impeccable/review/prelaunch/`, ignoradas pelo Git.
-
-## Promoção e recuperação
-
-Uma futura migração de Next.js para `master` exige preparar e rever a configuração de produção própria: a correção atual aplica-se apenas a `v2`. Após resolver A, validar B e receber autorização explícita, seguir o processo normal de revisão/merge para a branch de produção. Confirmar o commit publicado, indexação, headers e formulário no domínio real. Manter o deployment anterior disponível para rollback no painel Netlify. Nenhuma destas ações remotas foi executada nesta auditoria.
+Confirmar LinkedIn manualmente (HTTP 999 automatizado), Safari/iOS real e leitor de ecrã. Investigar LCP só com ganho demonstrado que preserve imagens. Acompanhar aviso dev histórico sem `npm audit fix --force` ou override incompatível. Rever termos portugueses da SpoolIQ numa intervenção própria.

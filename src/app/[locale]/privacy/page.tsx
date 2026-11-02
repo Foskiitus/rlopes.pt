@@ -42,9 +42,12 @@ export default async function Privacy({
         "controller",
         "collection",
         "processing",
+        "technical",
         "retention",
         "rights",
         "cookies",
+        "preferences",
+        "external",
       ].map((key) => (
         <section key={key}>
           <h2>{t(key)}</h2>
