@@ -19,7 +19,7 @@ Só depois da confirmação factual, atualizar `registrationScopeConfirmed` e `r
 ## B — Verificações e decisões do proprietário
 
 - [ ] Autorizar explicitamente o push e a criação de um preview. A autorização desta auditoria abrange commits locais, não publicação.
-- [ ] Confirmar no painel que a branch de produção continua `master`, que previews estão permitidos e que nenhuma configuração antiga de Vite (`dist` ou fallback SPA) substitui `netlify.toml`.
+- [ ] Confirmar no painel que a branch de produção continua `master` e que previews estão permitidos. Preservar o publish global `dist` da produção Vite; no log de `v2`, confirmar a leitura de `netlify.toml` do commit correto e o publish `.next` de `[context.v2]`, sem fallback SPA.
 - [ ] Confirmar receção e encaminhamento do alias `contact@rlopes.pt` no fornecedor de email. A caixa pessoal de destino deve permanecer apenas nas definições privadas desse fornecedor.
 - [ ] Validar o formulário e as notificações com o procedimento abaixo; verificar quotas, spam e o estado da conta.
 - [ ] Rever o site num telemóvel real, incluindo Safari/iOS, teclado aberto, seleção de idioma, zoom, foco e movimento reduzido. Os testes desta auditoria usam Chrome com emulação e gestos sintetizados.
@@ -36,11 +36,33 @@ Só depois da confirmação factual, atualizar `registrationScopeConfirmed` e `r
 
 1. Rever `git status` e os commits locais em `v2`. Após autorização para publicar, fazer push e abrir PR para `master`, sem merge.
 2. No projeto Netlify existente, confirmar a branch de produção e as regras de Deploy Previews. Um branch deploy de `v2` é alternativa; não associar `rlopes.pt` a esse preview.
-3. Confirmar `npm run build`, publish `.next`, Node 22 e o adaptador OpenNext automático no log. A aplicação usa Next.js 16.4.3 e não precisa de servidor personalizado, base de dados ou adaptador legado fixado.
+3. Confirmar a branch `v2`, `npm run build`, publish `.next`, Node 22 e o adaptador OpenNext automático no log. O comando e o publish devem indicar origem `config`, através de `[context.v2]`. A aplicação usa Next.js 16.4.3 e não precisa de servidor personalizado, base de dados ou adaptador legado fixado.
 4. Ativar deteção de formulários antes do build autorizado. Confirmar o blueprint e `project-enquiry` no artefacto estático/painel.
 5. Abrir o URL devolvido pelo deployment e repetir as verificações de rotas, imagens, animação, formulário e SEO. A execução local de `next build` não gera nem valida o pacote final do adaptador Netlify.
 
 Configuração conferida com [Next.js na Netlify](https://docs.netlify.com/build/frameworks/framework-setup-guides/nextjs/overview/) e [OpenNext Forms](https://opennext.js.org/netlify/forms), consultados durante a auditoria de 1–2 de novembro de 2026. Não foram alteradas definições remotas.
+
+## Isolamento do deployment de `v2`
+
+O diagnóstico comunicado pelo proprietário mostrou `npm run build`, publish `dist`, base `/` e HTTP 404, com `server`, `cache` e `build-manifest.json` no File Explorer. Estes são artefactos internos do Next.js, não um website estático pronto a servir. O código local não define `distDir` nem `output: "export"`: `next build` gera `.next`, que precisa do adaptador OpenNext para preparar funções, rotas e ficheiros públicos.
+
+Antes desta correção, o `netlify.toml` local já definia `.next` e Node 22 globalmente. A diferença relativamente ao deployment observado não pode ser explicada só pelos valores do painel: [as definições do ficheiro prevalecem sobre as da UI](https://docs.netlify.com/build/configure-builds/file-based-configuration/). No próximo build autorizado, confirmar o commit, a branch, o caminho do ficheiro de configuração, o contexto e a configuração resolvida. Se continuar a resolver `dist` para `v2`, investigar por que não está a carregar este ficheiro/contexto; não mudar o publish global da produção.
+
+A correção conserva `npm run build` e `dist` em `[build]`. Apenas `[context.v2]` substitui o publish por `.next`, com Node 22 em `[context.v2.environment]`. Os contextos de preview mantêm os indicadores de não indexação. Não há fallback para `/index.html`, configuração de exportação estática ou adaptador legado fixado. O [OpenNext recomenda `.next` e deteção automática do framework](https://opennext.js.org/netlify).
+
+Validação local com o resolvedor oficial `@netlify/config@25.5.2`, em modo `--offline`, sem consultar nem alterar a conta:
+
+| Branch simulada | Contexto | Build | Publish resolvido | Node definido pelo ficheiro |
+| --- | --- | --- | --- | --- |
+| `v2` | `branch-deploy` | `npm run build` | `.next` | `22` |
+| `v2` | `deploy-preview` | `npm run build` | `.next` | `22` |
+| `master` | `production` | `npm run build` | `dist` | nenhum |
+
+Esta comparação aplica o ficheiro atual aos três contextos; não é uma leitura da configuração remota. A `master` real permanece em `d4b41e8`, sem `netlify.toml`, com o seu build Vite e as definições existentes do painel. Nenhum ficheiro dessa branch nem configuração da conta foi alterado. A validação offline também não executa o adaptador nem o post-processing da Netlify.
+
+O erro 401 do plugin de limpeza Cloudflare é separado desta correção. Não existe configuração desse plugin no repositório; verificar a instalação e as credenciais privadas no painel numa intervenção própria, sem alterar agora os plugins ou definições globais que servem a produção.
+
+`Skipping form detection` significa que a deteção não foi executada naquele deployment. O blueprint e o POST estático já seguem a integração OpenNext; confirmar **Forms → Form detection → Enable form detection** antes de um novo deployment autorizado. Esta é uma definição do projeto, não uma definição isolada de `[context.v2]`, e não foi alterada. A deteção real e a entrega de notificações continuam por validar no preview, seguindo o procedimento abaixo.
 
 ## Formulário e notificações — verificação obrigatória no preview
 
@@ -97,4 +119,4 @@ Os dois últimos comandos restauram um build local não indexável. As mediçõe
 
 ## Promoção e recuperação
 
-Após resolver A, validar B e receber autorização explícita, seguir o processo normal de revisão/merge para a branch de produção. Confirmar o commit publicado, indexação, headers e formulário no domínio real. Manter o deployment anterior disponível para rollback no painel Netlify. Nenhuma destas ações remotas foi executada nesta auditoria.
+Uma futura migração de Next.js para `master` exige preparar e rever a configuração de produção própria: a correção atual aplica-se apenas a `v2`. Após resolver A, validar B e receber autorização explícita, seguir o processo normal de revisão/merge para a branch de produção. Confirmar o commit publicado, indexação, headers e formulário no domínio real. Manter o deployment anterior disponível para rollback no painel Netlify. Nenhuma destas ações remotas foi executada nesta auditoria.

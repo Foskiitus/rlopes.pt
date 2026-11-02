@@ -1,8 +1,13 @@
+# Preserve the existing Vite production defaults; only v2 uses Next.js.
 [build]
+  command = "npm run build"
+  publish = "dist"
+
+[context.v2]
   command = "npm run build"
   publish = ".next"
 
-[build.environment]
+[context.v2.environment]
   NODE_VERSION = "22"
 
 # Netlify automatically applies its supported OpenNext adapter.
