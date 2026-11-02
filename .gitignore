@@ -17,3 +17,20 @@ test-results/
 .impeccable/live/
 .impeccable/mocks/
 .impeccable/config.local.json
+
+# Private credentials, keys and disposable database exports
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+credentials.json
+service-account.json
+gcp-key.json
+secrets.yaml
+secrets.json
+*.sql
+*.sqlite
+*.sqlite3
+*.db

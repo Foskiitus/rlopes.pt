@@ -50,8 +50,27 @@ for (const locale of ["fr", "pt", "en"]) {
     locale + " form validation, pending, success and failure",
     async ({ page }) => {
       await page.goto("/" + locale + "#contact");
+      await page.locator(".contact-form").evaluate((form) => {
+        form.addEventListener("focusin", (event) => {
+          const field = event.target as HTMLInputElement;
+          if (field.id !== "name") return;
+          const errorId = field.getAttribute("aria-describedby");
+          form.setAttribute(
+            "data-error-at-focus",
+            String(
+              field.getAttribute("aria-invalid") === "true" &&
+                !!errorId &&
+                !!document.getElementById(errorId)?.textContent,
+            ),
+          );
+        });
+      });
       await page.locator('button[type="submit"]').click();
       await expect(page.locator("#name")).toBeFocused();
+      await expect(page.locator(".contact-form")).toHaveAttribute(
+        "data-error-at-focus",
+        "true",
+      );
       await expect(page.locator("#name-error")).toHaveText(
         copy[locale].contact.required,
       );
@@ -113,6 +132,13 @@ for (const locale of ["fr", "pt", "en"]) {
         copy[locale].contact.success,
       );
       await expect(page.locator(".form-status")).toBeFocused();
+      await page
+        .getByRole("button", {
+          name: copy[locale].contact.newMessage,
+          exact: true,
+        })
+        .click();
+      await expect(page.locator("#name")).toBeFocused();
     },
   );
   test(
@@ -707,3 +733,31 @@ test("blueprint field names exactly match the rendered form", async ({
     .evaluateAll((fields) => fields.map((f) => f.getAttribute("name")).sort());
   expect(actual).toEqual(blueprint);
 });
+
+for (const locale of ["fr", "pt", "en"]) {
+  test(
+    locale + " headings reflow with doubled root text size",
+    async ({ page }) => {
+      await page.emulateMedia({ reducedMotion: "reduce" });
+      for (const width of [360, 390]) {
+        await page.setViewportSize({ width, height: 844 });
+        for (const path of ["", "/legal", "/privacy"]) {
+          await page.goto("/" + locale + path);
+          await page.evaluate(() => document.fonts.ready);
+          await page.addStyleTag({
+            content: "html { font-size: 200% !important; }",
+          });
+          expect(
+            await page.evaluate(
+              () => document.documentElement.scrollWidth <= innerWidth,
+            ),
+          ).toBeTruthy();
+          const heading = await page.locator("h1").boundingBox();
+          expect(heading!.x + heading!.width).toBeLessThanOrEqual(width);
+          await page.locator(".header-contact").click();
+          await expect(page.locator("#name")).toBeVisible();
+        }
+      }
+    },
+  );
+}

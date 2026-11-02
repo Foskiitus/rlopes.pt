@@ -54,7 +54,7 @@ At widths of at least 1100px, heights of at least 680px and without reduced moti
 - src/i18n, src/proxy.ts and src/lib/metadata.ts: locale prefixes, preference, legacy redirects, canonical/hreflang and preview indexing policy.
 - public/__forms.html: static Netlify form blueprint; its field names must match ContactForm.tsx exactly.
 - public/projects, public/portfolio and public/og: authentic project materials and local social images.
-- src/fonts: locally hosted DM Sans and its OFL licence. Retained Newsreader files are not loaded.
+- src/fonts: locally hosted DM Sans and its OFL licence. Unused Newsreader files and its development package were removed in the pre-launch audit.
 - tests/portfolio.spec.ts: functional, accessibility, content, SEO and responsive checks.
 
 Edit project facts and corresponding translations together. Preserve correct image dimensions and real destinations. Historical Tecniwall, Gestão de Stocks, PhotoCelos, Tarefas+, Evently and TempoApp records and assets remain available internally; they have no new public gallery or project routes. Dates and technologies stay internal. The existing About illustration is identified as such in its alt text.
@@ -70,3 +70,9 @@ Changing the public email does not change the Netlify notification recipient. Co
 The independent [concept prototypes](design-proposals/v2.5/README.md) remain as historical review artifacts on port 3250. They are outside the Next app and are not deployed routes. The owner selected C + B; no further direction decision is pending.
 
 Earlier reports remain historical: [V2.4](docs/V2.4.md), [V2.3](docs/V2.3.md), [V2.2](docs/V2.2.md), [initial correction](docs/REWORK.md). The existing working tree includes the earlier Vite-to-Next migration; no commit, push, merge or deployment was made for V2.5.
+
+## Pre-launch audit
+
+See [the pre-launch audit](docs/PRELAUNCH-AUDIT.md) and [the A/B/C launch checklist](docs/LAUNCH.md). Local status: READY FOR PREVIEW; production still requires owner checks and live Netlify Forms delivery verification. No remote deployment was performed.
+
+After building, run `node scripts/check-build-seo.mjs preview` (or `production` only for a build created with that context).

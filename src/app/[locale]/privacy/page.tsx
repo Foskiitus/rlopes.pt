@@ -56,7 +56,7 @@ export default async function Privacy({
           )}
           {key === "processing" && (
             <p>
-              <a href="https://www.netlify.com/legal/terms-of-use/data-processing-addendum/">
+              <a href="https://www.netlify.com/pdf/netlify-dpa.pdf">
                 {t("provider")}
               </a>
             </p>

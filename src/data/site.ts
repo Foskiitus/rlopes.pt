@@ -18,7 +18,8 @@ export const business = {
   host: {
     name: "Netlify, Inc.",
     url: "https://www.netlify.com",
-    address: null as string | null,
+    // Netlify Website Terms of Use, section 15, verified 2026-11-01.
+    address: "101 2nd Street, San Francisco, CA 94105, United States",
     phone: null as string | null,
   },
   retentionPolicyConfirmed: false,

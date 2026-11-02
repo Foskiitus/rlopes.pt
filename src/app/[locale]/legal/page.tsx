@@ -66,7 +66,8 @@ export default async function Legal({
         <p>
           <a href={business.host.url}>{business.host.name}</a>
         </p>
-        <p>{business.host.address || t("hostingNote")}</p>
+        <p>{business.host.address}</p>
+        {!business.host.phone && <p>{t("hostingNote")}</p>}
         {business.host.phone && <p>{business.host.phone}</p>}
       </section>
       <section>

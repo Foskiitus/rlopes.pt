@@ -26,7 +26,10 @@ export function ContactForm() {
     setErrors(validation);
     const first = Object.keys(validation)[0];
     if (first) {
-      form.querySelector<HTMLElement>('[name="' + first + '"]')?.focus();
+      // Let React expose the error text and ARIA association before focus.
+      requestAnimationFrame(() =>
+        form.querySelector<HTMLElement>('[name="' + first + '"]')?.focus(),
+      );
       return;
     }
     locked.current = true;
@@ -190,7 +193,7 @@ export function ContactForm() {
           ref={status}
           tabIndex={-1}
           role={state === "error" ? "alert" : "status"}
-          aria-live="polite"
+          aria-live={state === "error" ? "assertive" : "polite"}
         >
           {state === "success" ? (
             <>
@@ -199,7 +202,13 @@ export function ContactForm() {
               <button
                 type="button"
                 className="text-link"
-                onClick={() => setState("idle")}
+                onClick={(event) => {
+                  const form = event.currentTarget.closest("form");
+                  setState("idle");
+                  requestAnimationFrame(() =>
+                    form?.querySelector<HTMLInputElement>("#name")?.focus(),
+                  );
+                }}
               >
                 {t("newMessage")}
               </button>

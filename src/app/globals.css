@@ -547,6 +547,7 @@ svg {
   padding-block: 30px 60px;
 }
 .legal-page h1 {
+  overflow-wrap: anywhere;
   font-size: clamp(2.6rem, 6vw, 5rem);
   line-height: 1.1;
   margin-block: 36px 20px;
@@ -671,6 +672,8 @@ svg {
   gap: 18px;
 }
 .hero h1 {
+  min-width: 0;
+  overflow-wrap: anywhere;
   font-size: clamp(2.625rem, 12vw, 3.375rem);
   font-weight: 760;
   line-height: 1.02;

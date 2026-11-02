@@ -35,7 +35,7 @@ Other original portfolio assets are preserved in `public/portfolio` without unsu
 - `public/portfolio/**`: original repository images and SVGs, retained without creative alteration.
 - `public/ricardo-lopes.webp`: copied from original `src/assets/foto_perfil.webp`. It is an existing stylized illustration, not a new photograph or invented portrait. Alt text identifies it as an illustration; it remains in About.
 - `public/og/{fr,pt,en}.png`: 1200 × 630 share graphics rendered from the portfolio's own title copy, colors and locally licensed fonts.
-- `src/fonts/*`: DM Sans via Fontsource is the active family, self-hosted with its supplied OFL license. The earlier Newsreader files remain unused. No browser calls to Google Fonts.
+- `src/fonts/*`: DM Sans via Fontsource is the active family, self-hosted with its supplied OFL license. The unused Newsreader dependency and font files were removed during the pre-launch audit. No browser calls to Google Fonts.
 - Temporary raw captures are removed by the asset preparation script. The working screenshots under `.impeccable/review` are ignored by Git.
 
 The user's brief authorizes reuse of their own project materials. No unrelated stock photos or AI-generated project imagery were used.
@@ -63,3 +63,9 @@ The owner’s V2.3 brief identifies La Ciotat, France as the current base and ne
 ## V2.5 raster provenance
 
 The three social PNGs were regenerated from the localized V2.5 hero with the existing authentic SpoolIQ image. Their origin is embedded as PNG text metadata. The four referenced WebP images use adjacent .webp.json provenance sidecars created by Impeccable, which uses a sidecar fallback for that format. Decoded-pixel SHA-256 checks before and after provenance recording matched for all seven assets; project imagery was not redrawn or recompressed. Other historical raster files remain unchanged. Regenerating the social PNGs replaces their embedded metadata; reapply the documented origin after regeneration.
+
+## Pre-launch audit — November 2026
+
+- Netlify hosting address: [official Website Terms of Use, section 15](https://www.netlify.com/legal/terms-of-use/), checked 1 November 2026. The telephone remains unverified and is a production launch item.
+- The former DPA link returned HTTP 404. The [official GDPR/CCPA page](https://www.netlify.com/gdpr-ccpa/) links to the [Netlify DPA PDF](https://www.netlify.com/pdf/netlify-dpa.pdf), which returned HTTP 200 and identifies a 9 June 2026 revision.
+- Current audit results and scope: [PRELAUNCH-AUDIT.md](PRELAUNCH-AUDIT.md); owner actions: [LAUNCH.md](LAUNCH.md). Previous iteration reports are historical snapshots.
