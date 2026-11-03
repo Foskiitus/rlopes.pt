@@ -1,17 +1,16 @@
-# Preserve the existing Vite production defaults; only v2 uses Next.js.
+# Next.js configuration prepared for the V2.5 production migration.
+# All branches containing the migrated application use Next.js.
 [build]
-  command = "npm run build"
-  publish = "dist"
-
-[context.v2]
   command = "npm run build"
   publish = ".next"
 
-[context.v2.environment]
+[build.environment]
   NODE_VERSION = "22"
 
 # Netlify automatically applies its supported OpenNext adapter.
 # Keep master as the production branch in the dashboard.
+[context.production.environment]
+  NEXT_PUBLIC_DEPLOY_CONTEXT = "production"
 [context.deploy-preview.environment]
   NEXT_PUBLIC_DEPLOY_CONTEXT = "deploy-preview"
 

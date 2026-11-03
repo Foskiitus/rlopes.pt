@@ -3,7 +3,11 @@ const source = readFileSync("src/data/site.ts", "utf8");
 const issues = [];
 if (source.includes("registrationScopeConfirmed: false"))
   issues.push(
-    "Owner must confirm the complete civil name, professional domiciliation, current registration and VAT regime; see docs/V2-FINAL-RELEASE.md.",
+    "Owner must confirm the complete civil name, professional domiciliation and current registration; see docs/PRODUCTION-MIGRATION.md.",
+  );
+if (source.includes("vatRegimeConfirmed: false"))
+  issues.push(
+    "Confirm the applicable VAT regime; absence of a valid VAT number does not prove an exemption.",
   );
 if (source.includes("address: null") || source.includes("phone: null"))
   issues.push("Complete verified hosting address and telephone.");

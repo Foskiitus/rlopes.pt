@@ -1,5 +1,7 @@
 # Portfolio V2.5 — final release candidate
 
+> **Seguimento de 03/11/2026:** a referência atual é [PRODUCTION-MIGRATION.md](PRODUCTION-MIGRATION.md), estado **MIGRATION BLOCKED**. O proprietário confirmou identidade/registo, notificação Gmail e encaminhamento Cloudflare; a configuração Next.js foi aplicada apenas localmente em v2. IVA, telefone Netlify, adoção da retenção, integrações privadas, visualização da submissão, investigação do 500 e identificação dos deploys continuam pendentes. Não houve merge/push/deploy. O corpo abaixo conserva a auditoria de 02/11; pontos entretanto confirmados não devem ser tratados como novamente desconhecidos.
+
 **Decisão: OWNER ACTION REQUIRED**
 
 Verificação: 2 de novembro de 2026. Branch de trabalho: `v2`.
@@ -310,3 +312,13 @@ Impedem aprovação de lançamento agora, mas não significam falha dos testes l
 Base: `v2` em `2b83e05`; `master` preservada em `d4b41e8293dc6860f357d345cf2fa76e37afbad1`. Alterações pendentes da auditoria RGPD foram incorporadas. O commit local reúne privacidade/menções legais, proteção SEO de preview, testes e documentação, incluindo artefacto futuro inativo. Hash final no relatório de entrega, consultável com `git log -1 --oneline`.
 
 Design, conteúdo comercial, seleção de projetos, implementação Forms e definições remotas não foram alterados. Evidências/temporários permanecem ignorados; emails reais, dumps de conta e segredos não foram guardados no commit.
+
+## Seguimento de 3 de novembro de 2026
+
+O proprietário aprovou o nome legal **Ricardo SILVA LOPES EI**, SIREN **107 688 467**, SIRET **107 688 467 00011**, domiciliação já apresentada, Insee **15/07/2026**, RNE/INPI **01/08/2026** e atividade **Programmation informatique / APE 62.01Z**. Estes valores foram aplicados às três línguas. O nome público Ricardo Lopes permanece. A ausência de número intracomunitário válido no registo não demonstra regime fiscal: retirada a afirmação art. 293 B/microempreendedor e criada confirmação de IVA separada, ainda falsa.
+
+A identidade deixa de ser bloqueio pendente; a fonte da confirmação é a declaração expressa do proprietário de 03/11. `registrationScopeConfirmed` passou a true. Telefone oficial Netlify e adoção da conservação continuam pendentes, conforme reafirmado pelo proprietário.
+
+O proprietário confirmou deteção do formulário e receção da notificação Gmail, bem como encaminhamento Cloudflare de contact@rlopes.pt, em testes de 02/11, 23h48–23h53 Europe/Paris. A visualização do registo na lista Netlify ainda não foi confirmada. A política identifica Gmail/Google e Cloudflare; não houve acesso a mensagens, alteração do email, SMTP ou exposição do encaminhamento privado.
+
+O modelo de configuração futura foi aplicado à raiz apenas localmente em v2. Resolução offline production/master e contextos de preview passaram com .next/Node 22. Build/SEO de produção e preview, 62 testes, 12 rotas HTTP locais e seis vistas/scans Axe legais passaram depois das alterações. A produção permanece Vite, master intacta. Tag local de rollback criada; deploy ID remoto ainda por registar. Não foi feito merge, por persistirem os bloqueios detalhados no relatório de migração.

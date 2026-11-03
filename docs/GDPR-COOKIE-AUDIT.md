@@ -112,3 +112,11 @@ As integrações privadas Netlify, retenção de logs, DPA/email/transferências
 Nova consulta pública do preview confirmou raiz/idiomas acessíveis e blueprint 200, mas não demonstra deteção, armazenamento ou entrega Forms. Uma consulta a `/pt/privacy` devolveu 500 e cinco retestes 200; investigar logs, sem inventar a causa. Não houve POST real. O commit do deployment não foi autenticado no painel e as alterações locais continuam sem push/deploy.
 
 A proteção SEO foi refinada separadamente: preview com header/metadados noindex e robots permitindo crawling para leitura dessas diretivas; produção compilada sem noindex geral. Não altera a conclusão de cookies nem prova remoção de todos os índices. Ambos os builds/contextos passaram. A configuração Netlify ativa e o design permanecem intactos.
+
+## Confirmações operacionais de 3 de novembro de 2026
+
+O proprietário confirmou deteção de project-enquiry, notificação recebida no Gmail e encaminhamento de contact@rlopes.pt por Cloudflare Email Routing em 02/11/2026, aproximadamente 23h48–23h53 Europe/Paris. A visualização da submissão na lista Netlify permanece pendente. Nenhuma mensagem real foi acedida/enviada pelo agente; nenhum destinatário privado foi revelado. Respostas por Gmail são intencionais; não foi configurado SMTP.
+
+A política FR/PT/EN passa a identificar Gmail (Google) e Cloudflare Email Routing, removendo a anterior indicação de que a identidade dos serviços de email era desconhecida. As garantias contratuais/transferências, logs e integrações privadas continuam por verificar. A retenção de 12 meses continua proposta, ainda sem adoção operacional, conforme o proprietário. Não foi acrescentado banner nem alterada a gravação de cookies.
+
+Identidade/registo profissionais confirmados pelo proprietário; regime de IVA continua separado e por confirmar, sem deduzir isenção da ausência de número válido. A suite de 62 testes voltou a passar após as alterações. Estado atual e restantes bloqueios: [PRODUCTION-MIGRATION.md](PRODUCTION-MIGRATION.md). Nenhum merge, push ou deploy executado.

@@ -7,16 +7,21 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/rilopes/",
 } as const;
 
-// Public sources rechecked 2026-11-02: Loprim3D, official company API and BODACC.
-// Owner must confirm full civil name, domiciliation and VAT before publication.
-// Source details and pending confirmations: docs/V2-FINAL-RELEASE.md.
+// Identity, SIRET, Insee/RNE dates and activity confirmed by owner on 2026-11-03.
+// RCS Marseille corroborated in BODACC on 2026-11-02; VAT remains unconfirmed.
+// Sources and outstanding launch items: docs/PRODUCTION-MIGRATION.md.
 export const business = {
-  publisher: "Ricardo Silva Lopes EI",
+  publisher: "Ricardo SILVA LOPES EI",
   address: "Bâtiment 13, 390 Avenue François Billoux, 13600 La Ciotat, France",
   phone: "+33 7 66 23 41 10",
   siren: "107 688 467",
+  siret: "107 688 467 00011",
+  inseeRegisteredOn: "2026-07-15",
+  rneRegisteredOn: "2026-08-01",
+  ape: "62.01Z",
   register: "RCS Marseille",
-  registrationScopeConfirmed: false,
+  registrationScopeConfirmed: true,
+  vatRegimeConfirmed: false,
   host: {
     name: "Netlify, Inc.",
     url: "https://www.netlify.com",

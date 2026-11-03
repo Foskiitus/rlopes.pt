@@ -29,6 +29,13 @@ export default async function Legal({
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
   const t = await getTranslations("legal");
+  const registrationDate = (value: string) =>
+    new Intl.DateTimeFormat(locale, {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      timeZone: "UTC",
+    }).format(new Date(value));
   return (
     <main id="main" className="legal-page wrap">
       <a className="text-link" href={"/" + locale}>
@@ -52,6 +59,18 @@ export default async function Legal({
       <section>
         <h2>{t("registration")}</h2>
         <p>SIREN : {business.siren}</p>
+        <p>SIRET : {business.siret}</p>
+        <p>
+          {t("inseeRegistration", {
+            date: registrationDate(business.inseeRegisteredOn),
+          })}
+        </p>
+        <p>
+          {t("rneRegistration", {
+            date: registrationDate(business.rneRegisteredOn),
+          })}
+        </p>
+        <p>{t("activity", { code: business.ape })}</p>
         <p>
           {business.register} — {business.siren}
         </p>
@@ -91,7 +110,8 @@ export default async function Legal({
         <h2>{t("law")}</h2>
         <p>{t("lawBody")}</p>
       </section>
-      {!business.registrationScopeConfirmed && (
+      {(!business.registrationScopeConfirmed ||
+        !business.vatRegimeConfirmed) && (
         <p className="legal-notice">{t("verification")}</p>
       )}
     </main>

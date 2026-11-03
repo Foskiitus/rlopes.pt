@@ -1,4 +1,4 @@
-# FUTURE CONFIGURATION ONLY: replace root netlify.toml after explicit approval.
+# REFERENCE TEMPLATE: applied locally to root netlify.toml on 2026-11-03.
 # All branches containing the migrated application use Next.js.
 [build]
   command = "npm run build"
