@@ -13,7 +13,7 @@ if (source.includes("address: null") || source.includes("phone: null"))
   issues.push("Complete verified hosting address and telephone.");
 if (source.includes("retentionPolicyConfirmed: false"))
   issues.push(
-    "Adopt and execute the manual 12-month enquiry retention procedure in docs/V2-FINAL-RELEASE.md.",
+    "Apply the manual retention and archiving procedure by document category in docs/DATA-RETENTION.md.",
   );
 if (issues.length) {
   console.error(

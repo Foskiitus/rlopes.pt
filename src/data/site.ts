@@ -8,7 +8,8 @@ export const site = {
 } as const;
 
 // Identity, SIRET, Insee/RNE dates and activity confirmed by owner on 2026-11-03.
-// RCS Marseille corroborated in BODACC on 2026-11-02; VAT remains unconfirmed.
+// RCS Marseille corroborated in BODACC on 2026-11-02.
+// Owner confirmed franchise en base de TVA on 2026-11-03; no VAT number inferred.
 // Sources and outstanding launch items: docs/PRODUCTION-MIGRATION.md.
 export const business = {
   publisher: "Ricardo SILVA LOPES EI",
@@ -21,7 +22,7 @@ export const business = {
   ape: "62.01Z",
   register: "RCS Marseille",
   registrationScopeConfirmed: true,
-  vatRegimeConfirmed: false,
+  vatRegimeConfirmed: true,
   host: {
     name: "Netlify, Inc.",
     url: "https://www.netlify.com",

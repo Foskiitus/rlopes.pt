@@ -1,6 +1,6 @@
 # Portfolio V2.5 — final release candidate
 
-> **Seguimento de 03/11/2026:** a referência atual é [PRODUCTION-MIGRATION.md](PRODUCTION-MIGRATION.md), estado **MIGRATION BLOCKED**. O proprietário confirmou identidade/registo, notificação Gmail e encaminhamento Cloudflare; a configuração Next.js foi aplicada apenas localmente em v2. IVA, telefone Netlify, adoção da retenção, integrações privadas, visualização da submissão, investigação do 500 e identificação dos deploys continuam pendentes. Não houve merge/push/deploy. O corpo abaixo conserva a auditoria de 02/11; pontos entretanto confirmados não devem ser tratados como novamente desconhecidos.
+> **Seguimento de 03/11/2026:** a referência atual é [PRODUCTION-MIGRATION.md](PRODUCTION-MIGRATION.md), estado **MIGRATION BLOCKED**. O proprietário confirmou identidade/registo, notificação Gmail e encaminhamento Cloudflare; a configuração Next.js foi aplicada apenas localmente em v2. Franchise en base de TVA foi entretanto confirmada; permanecem pendentes telefone Netlify, implementação da conservação/arquivo por finalidade, integrações privadas, visualização da submissão, investigação do 500 e identificação dos deploys. A orientação operacional atual está em [DATA-RETENTION.md](DATA-RETENTION.md). Não houve merge/push/deploy. O corpo abaixo conserva a auditoria de 02/11; pontos entretanto confirmados não devem ser tratados como novamente desconhecidos.
 
 **Decisão: OWNER ACTION REQUIRED**
 
@@ -67,43 +67,16 @@ A política FR/PT/EN identifica responsável, dados obrigatórios/alternativa po
 
 Menus variam por plano/interface; ausência de um menu não prova inexistência de integração. Não copiar credenciais, payloads ou dados pessoais para evidências públicas. Nenhuma configuração remota foi alterada.
 
-## 3. Conservação: procedimento manual pronto a adotar
+## 3. Conservação por finalidade — orientação atualizada
 
-**Proposto, não adotado nem executado nesta intervenção; não automatizado.** Responsável proposto: Ricardo Lopes. Os 12 meses são política escolhida, não prazo legal universal. `retentionPolicyConfirmed` continua `false`; a informação pública mantém esse estado transparente.
+**Correção de 03/11/2026:** este ponto substitui o anterior procedimento centrado nos 12 meses. Não aplicar esse prazo a toda a correspondência ou a um dossier só por não ter originado um projeto.
 
-### Classificação e data-limite
+- Pedidos sem seguimento, sem outro fundamento de conservação: **12 meses propostos** após o último contacto substantivo, salvo justificação legal documentada.
+- Clientes, contratos e correspondência comercial: preservar os elementos necessários à execução, prova dos acordos e defesa de direitos, com **referência de 5 anos** e início/regras de contagem aplicáveis.
+- Faturas/comprovativos/documentos contabilísticos: **10 anos a partir do encerramento do exercício**, segundo obrigações aplicáveis; não confundir com prazo do pedido inicial.
+- No fim da relação, separar apenas o necessário em arquivo com acesso limitado. Rever exceções, cópias e datas; não eliminar automaticamente por idade ou suporte.
 
-1. Separar pedidos em análise, **pedidos sem projeto** e **clientes/projetos efetivos**. Sem projeto: não há proposta aceite, contrato ou trabalho em execução. Etiquetas/pastas no email bastam; não criar base de dados.
-2. Último contacto: última troca substantiva relativa à necessidade do interessado, recebida ou resposta necessária. Confirmações automáticas, duplicados, spam e lembretes comerciais não solicitados não reiniciam o prazo.
-3. Se houve seguimento por email, usar a última troca, não só a data inicial Netlify. Nova mensagem substantiva do interessado pode atualizar a data. Rever dúvidas, sem conservar indefinidamente por falta de classificação.
-4. Limite: último contacto + **12 meses de calendário**. Recomenda-se revisão mensal, por exemplo no primeiro dia útil. Eliminar pedidos vencidos e aqueles que venceriam antes da revisão seguinte, quando já sem necessidade legítima. Assim não se acrescenta automaticamente um 13.º mês. Se um caso precisar de ser conservado até ao limite, agendar revisão específica antes desse vencimento.
-5. Clientes, contratos, faturação, garantias e litígios seguem categorias/prazos legais e contratuais próprios, a confirmar profissionalmente. Não aplicar 12 meses cegamente a faturas nem usar exceções para conservar todos os contactos indefinidamente.
-
-### Caixa de correio
-
-- Na adoção, marcar início/primeira revisão e tratar o histórico. Não anunciar implementação antes da primeira execução real.
-- Pesquisar conversas anteriores ao limite; verificar última troca e categoria nas interfaces privadas autorizadas.
-- Eliminar pedidos elegíveis da entrada, arquivo e enviados, notificações duplicadas, anexos e cópias controladas. Rever spam/lixo; spam não precisa de ser guardado 12 meses.
-- Eliminar definitivamente conforme o fornecedor; confirmar recuperação/backups/logs. Não prometer destruição instantânea de todas as cópias internas do fornecedor.
-- Não publicar capturas, cabeçalhos ou destinatários privados; não criar exportações só para esta auditoria.
-
-### Netlify Forms e cópias
-
-- Abrir o projeto correto, **Forms → project-enquiry**. Rever verificadas e spam, relacionando manualmente com a conversa de email para obter a última data substantiva.
-- Selecionar e eliminar apenas as **submissões elegíveis**, conferindo a seleção. **Não eliminar o formulário.** Apagar email não apaga Netlify, nem o inverso.
-- Eliminar CSV/exportações, ficheiros, anexos e duplicados controlados sem finalidade remanescente; considerar outros destinatários internos configurados. Confirmar limitações de recuperação com fornecedores.
-- Guardar num registo privado mínimo data, contagens e exceções justificadas, sem reproduzir mensagens. Ver [gestão de submissões Netlify](https://docs.netlify.com/manage/forms/submissions/).
-
-### Checklist mensal
-
-- [ ] Rever categorias e datas-limite até à próxima revisão.
-- [ ] Separar documentos de clientes/obrigações legais concretas.
-- [ ] Eliminar pedidos elegíveis do email, duplicados, spam e lixo.
-- [ ] Eliminar submissões correspondentes na Netlify, incluindo spam.
-- [ ] Rever exportações/cópias e guardar evidência mínima da execução.
-- [ ] Marcar próxima revisão; responder a pedidos de direitos sem esperar pela revisão mensal.
-
-Depois de adoção e execução comprovadas, atualizar a redação nas três línguas e só então `retentionPolicyConfirmed`. Nenhum calendário, automatismo ou eliminação foi ativado nesta intervenção.
+O procedimento simples de Gmail/Netlify, revisão e fontes oficiais está em [DATA-RETENTION.md](DATA-RETENTION.md). Submissões e emails são classificados pelo conteúdo/finalidade. **Organização, revisão e arquivo ainda por implementar; sem automação.** Nenhum dado real foi acedido/movido/eliminado; `retentionPolicyConfirmed` continua falso.
 
 ## 4. Preview público e formulário
 
@@ -322,3 +295,7 @@ A identidade deixa de ser bloqueio pendente; a fonte da confirmação é a decla
 O proprietário confirmou deteção do formulário e receção da notificação Gmail, bem como encaminhamento Cloudflare de contact@rlopes.pt, em testes de 02/11, 23h48–23h53 Europe/Paris. A visualização do registo na lista Netlify ainda não foi confirmada. A política identifica Gmail/Google e Cloudflare; não houve acesso a mensagens, alteração do email, SMTP ou exposição do encaminhamento privado.
 
 O modelo de configuração futura foi aplicado à raiz apenas localmente em v2. Resolução offline production/master e contextos de preview passaram com .next/Node 22. Build/SEO de produção e preview, 62 testes, 12 rotas HTTP locais e seis vistas/scans Axe legais passaram depois das alterações. A produção permanece Vite, master intacta. Tag local de rollback criada; deploy ID remoto ainda por registar. Não foi feito merge, por persistirem os bloqueios detalhados no relatório de migração.
+
+## Correção posterior de conservação e IVA — 3 de novembro de 2026
+
+A política FR/PT/EN distingue pedidos sem seguimento, correspondência comercial e documentos contabilísticos, com arquivo proporcional e separado. O procedimento atual de [DATA-RETENTION.md](DATA-RETENTION.md) prevalece sobre instruções históricas de retenção. O proprietário confirmou expressamente franchise en base de TVA; `vatRegimeConfirmed` passou a true e nenhum número fiscal foi inventado. A implementação operacional da conservação/arquivo permanece pendente. Publicação, design e funcionalidades não foram alterados.

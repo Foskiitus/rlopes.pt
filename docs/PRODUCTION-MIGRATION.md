@@ -2,6 +2,8 @@
 
 **Estado: MIGRATION BLOCKED**
 
+> Atualização posterior de 03/11/2026: franchise en base de TVA confirmada pelo proprietário; IVA deixa de ser pendência. A conservação foi corrigida por finalidade (12 meses / referência comercial de 5 anos / contabilidade 10 anos), sem eliminação indiscriminada. A organização e o arquivo ainda precisam de implementação. Ver [DATA-RETENTION.md](DATA-RETENTION.md). Configuração de publicação inalterada nesta correção.
+
 Data: **3 de novembro de 2026**, Europe/Paris. Preparação local concluída em `v2`; **nenhum merge, push ou deploy executado**. A autorização para preparar não é autorização para publicar. O proprietário reiterou que não deve haver merge/publicação antes da aprovação final.
 
 O código e a configuração passaram as verificações técnicas. A publicação permanece bloqueada pelas pendências legais e operacionais confirmadas abaixo. Não se solicita ainda aprovação de um push de produção como se essas pendências estivessem resolvidas.
@@ -13,7 +15,7 @@ O código e a configuração passaram as verificações técnicas. A publicaçã
 | Destino real | **master**, confirmado por Git remoto e pelo proprietário como branch de produção Netlify; não existe branch remota `main`. Nenhuma branch renomeada. |
 | Produção Git anterior | **d4b41e8293dc6860f357d345cf2fa76e37afbad1**; `master` e `origin/master` continuam neste commit. |
 | Release V2 existente no início | **cca20ee6cd3b2593a554dc4a469b81ef18546960**, com correções legais/RGPD. `v2` e `origin/v2` estavam sincronizadas após fetch; contagem ahead/behind 0/0. |
-| Preparação desta passagem | Commit local de `v2` que contém este relatório/configuração/dados confirmados; identificar com `git log -1 --format="%H %s" v2`. Novas alterações não foram publicadas. |
+| Preparação da migração | **baa7915659c462f453b406c49767bda9e4868bae**. A correção posterior de conservação/IVA permanece na mesma branch; consultar `git log -1 --format="%H %s" v2` para o HEAD local atualizado. Nenhuma alteração publicada. |
 | Novo commit de produção | **Não existe**: merge bloqueado, `master` preservada. Testes executados sobre o candidato em `v2`, não sobre um merge realizado. |
 | Referência de rollback Git | Tag local anotada **rollback/vite-master-2026-11-03**, apontando para `d4b41e8293dc6860f357d345cf2fa76e37afbad1`; não publicada. |
 | Deploy ID de produção anterior | **Pendente**, ainda não registado pelo proprietário. A tag Git não é um deploy ID e não prova qual artefacto está atualmente publicado. |
@@ -37,11 +39,11 @@ O proprietário confirmou expressamente em 03/11/2026 os dados abaixo, declarand
 | Inscrição RNE/INPI | **01/08/2026**, apresentada em formato localizado. |
 | Atividade / APE | Programmation informatique / **62.01Z**, traduzida em PT/EN. |
 | Domiciliação | **Bâtiment 13, 390 avenue François Billoux, 13600 La Ciotat, France** |
-| IVA | O registo consultado não indica número intracomunitário válido. **Não se deduz isenção nem regime fiscal dessa ausência.** Retirada a afirmação do art. 293 B; o regime aplicável permanece por confirmar. |
+| IVA | **Franchise en base de TVA confirmada expressamente pelo proprietário em 03/11/2026**. Informação pública: TVA non applicable. Nenhum número intracomunitário inventado nem regime deduzido da ausência de identificador. |
 
 A referência RCS Marseille previamente corroborada no [BODACC](https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A20260148253) foi preservada, distinguindo-se dos novos dados RNE fornecidos pelo proprietário. As fontes históricas estão em [V2-FINAL-RELEASE.md](V2-FINAL-RELEASE.md).
 
-`registrationScopeConfirmed` passou a `true` para identidade/registo; foi separado **`vatRegimeConfirmed: false`**, evitando que confirmação da identidade dispensasse indevidamente a confirmação fiscal. `retentionPolicyConfirmed` continua `false`, telefone Netlify continua `null`. Avisos correspondentes permanecem visíveis em FR/PT/EN.
+`registrationScopeConfirmed` passou a `true` para identidade/registo; a confirmação fiscal permanece separada em **`vatRegimeConfirmed: true`**, atualizada só após confirmação expressa do regime pelo proprietário. `retentionPolicyConfirmed` continua `false`, telefone Netlify continua `null`. Os avisos de alojamento e estado operacional continuam corretos em FR/PT/EN; o regime de IVA já não é apresentado como desconhecido.
 
 A informação de alojamento continua Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, United States, conforme [termos oficiais](https://www.netlify.com/legal/terms-of-use/). Telefone oficial permanece por verificar/completar. Não foi inventado.
 
@@ -59,7 +61,7 @@ Testes comunicados pelo proprietário: **02/11/2026, aproximadamente 23h48–23h
 | Respostas enviadas através do Gmail | Escolha intencional do proprietário; preservada. Sem SMTP ou serviço adicional. |
 | Destinatário exato da notificação no painel | Não inferido do email apresentado no website. Receção confirmada; não foi alterada a configuração existente. |
 | Consentimento/tracking | Nenhum tracker opcional identificado na auditoria existente; sem banner novo. Analytics, snippets, replay, log drains e integrações privadas continuam pendentes de revisão. |
-| Conservação | Política proposta de 12 meses ainda **não adotada operacionalmente**, conforme proprietário. Redação pública permanece fiel; procedimento manual na secção 3 do relatório final. |
+| Conservação | [Política por finalidade](DATA-RETENTION.md): 12 meses propostos apenas para pedidos sem seguimento sem outra razão legal; referência comercial de 5 anos; contabilidade 10 anos. Arquivo separado dos elementos necessários após a relação. Organização/revisão/arquivo **ainda por implementar**. |
 
 A política FR/PT/EN identifica agora os serviços efetivamente confirmados: Netlify Forms → notificação Gmail (Google); email direto ao endereço profissional → Cloudflare Email Routing → Gmail; respostas pelo Gmail. Garantias contratuais/transferências, logs e integrações adicionais continuam sujeitos a revisão. Não foi publicado o endereço pessoal, nem consultadas/eliminadas mensagens reais.
 
@@ -130,14 +132,14 @@ Node 22.23.4, Next.js 16.4.3. Nada foi redesenhado; homepage, projetos, animaç�
 | Build e SEO preview | Passaram após os mesmos ajustes; noindex mantido exclusivamente no contexto apropriado. Build local final é de preview. |
 | Resolução Netlify offline | Passou nos três contextos indicados. |
 | Revisão de ficheiros | 117 ficheiros versionados inventariados, 85 textos verificados por padrões de chaves/credenciais/email pessoal; zero achados. Não equivale a prova absoluta de ausência de segredos. Novos documentos também revistos antes do commit. |
-| `npm run check:production` | **Saída 1 intencional:** IVA, telefone Netlify e adoção da retenção continuam pendentes. Não declarado aprovado. |
+| `npm run check:production` | **Saída 1 intencional:** telefone Netlify e implementação da conservação/arquivo continuam pendentes. IVA foi entretanto confirmado; o comando não é declarado aprovado. |
 
 Não foi repetido Lighthouse nem alterado package/lockfile. Métricas de desempenho anteriores são históricas. Capturas/evidências em `.impeccable/review/migration/` estão ignoradas; sem submissões, credenciais ou caixa de correio.
 
 ## 7. Bloqueios antes de merge/publicação
 
-1. **Confirmar regime de IVA e obter telefone oficial do alojamento.** Identidade/registo já foram confirmados; não voltar a tratá-los como desconhecidos.
-2. **Adotar a conservação** e rever integrações privadas/garantias de tratamento. Não declarar eliminação implementada ou analytics desativado.
+1. **Obter telefone oficial do alojamento.** Identidade/registo e franchise en base de TVA já foram confirmados; não voltar a tratá-los como desconhecidos.
+2. **Implementar a conservação e o arquivo por finalidade** conforme [DATA-RETENTION.md](DATA-RETENTION.md) e rever integrações privadas/garantias. Não declarar eliminação/arquivo implementados ou analytics desativado.
 3. **Confirmar a submissão existente na lista Netlify.** Notificação e encaminhamento já confirmados; não solicitar novamente esses testes.
 4. **Investigar o 500 nos logs**, com rota/horário/evidências da auditoria anterior. Não o declarar resolvido só por retestes 200.
 5. **Registar deploy ID de produção para rollback e SHA/deploy ID atual do preview.** Não confundir o `x-nf-request-id` guardado nas evidências com deploy ID.

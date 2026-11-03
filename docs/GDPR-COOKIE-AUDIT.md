@@ -59,24 +59,13 @@ O GET público de `/__forms.html` devolveu 200, o formulário esperado e `X-Robo
 
 A [CNIL exige informação transparente no momento da recolha](https://www.cnil.fr/fr/informer-les-personnes). Por isso, foi corrigida a anterior afirmação incondicional de eliminação aos 12 meses: o proprietário confirmou que hoje as mensagens permanecem na caixa de correio sem calendário formal.
 
-## Conservação proposta e ações operacionais pendentes
+## Conservação por finalidade — correção de 3 de novembro de 2026
 
-Regra solicitada pelo proprietário: eliminar periodicamente os pedidos que não resultem em projetos até 12 meses após o último contacto; para clientes efetivos, conservar segundo necessidades contratuais e obrigações legais aplicáveis. **A regra é uma proposta ainda não implementada ou automatizada**, expressamente identificada assim nas três línguas. `retentionPolicyConfirmed` permanece `false`.
+A orientação operacional atual é [DATA-RETENTION.md](DATA-RETENTION.md). Os **12 meses propostos** após último contacto aplicam-se só aos pedidos sem seguimento sem outra justificação legal; não determinam eliminação de prova, correspondência comercial ou faturas. Para contratos/correspondência, referência de **5 anos**, segundo o ponto de partida e regras aplicáveis; para contabilidade, **10 anos desde o encerramento do exercício**.
 
-Antes de declarar este processo operacional:
+Netlify Forms e Gmail são suportes, não categorias de prazo. A revisão deve preservar elementos necessários, separar o arquivo comercial/contabilístico do uso corrente e limitar acesso; eliminar apenas o que perdeu finalidade e cumpriu as obrigações aplicáveis. A organização, revisão e separação do arquivo **ainda não estão implementadas nem automatizadas**; `retentionPolicyConfirmed` permanece falso.
 
-1. Definir responsável, calendário de revisão e critérios do último contacto; a revisão periódica deve permitir cumprir o prazo de 12 meses, não acrescentar automaticamente mais um período depois desse prazo.
-2. Aplicar a regra à caixa de correio, notificações, Netlify Forms (incluindo separador de spam), exportações e outras cópias. Apagar um email não apaga a submissão na Netlify. A [Netlify recomenda gerir e eliminar regularmente os dados dos formulários](https://docs.netlify.com/manage/forms/submissions/).
-3. Na Netlify, rever **Forms → project-enquiry**, identificar os registos a eliminar e usar a eliminação das submissões selecionadas. Não eliminar o próprio formulário. Rever separadamente spam e cópias/exportações; qualquer eliminação real deve ser autorizada pelo proprietário.
-4. Distinguir correspondência de trabalho, documentos contratuais, faturação e eventuais litígios. Confirmar os prazos legais concretos aplicáveis com apoio profissional; não aplicar um prazo genérico a todos os dados de clientes.
-5. Registar a execução da política com o mínimo de dados necessário, tratar pedidos de direitos e confirmar as limitações de backups dos fornecedores. Só então atualizar a informação pública e o indicador de verificação.
-
-Verificações adicionais da conta e dos tratamentos:
-
-- Inventariar Netlify Analytics/Web Analytics, snippets, Session Replay, plugins, funções de submissão, webhooks, log drains e serviços ligados. O proprietário declarou a verificação pendente; nenhum deles foi assumido como desativado. Repetir a inspeção de navegador se as definições mudarem.
-- Confirmar se existe análise de logs e a sua finalidade; documentar retenção, acesso e fornecedores. Não inferir um prazo de logs a partir do prazo do formulário.
-- Rever os contratos/DPA dos fornecedores de email e Netlify, subprocessadores e países efetivos. O [DPA Netlify de 9 de junho de 2026](https://www.netlify.com/pdf/netlify-dpa.pdf) prevê mecanismos de transferência conforme o caso; a [lista publicada](https://www.netlify.com/trust-center/) inclui Automattic/Akismet nos EUA. Isto não prova a configuração contratual da conta nem o mecanismo aplicável a todos os emails.
-- Documentar bases legais, minimização, ponderação de interesse legítimo, acesso às caixas de correio e tratamento de direitos. Confirmar os elementos de identidade profissional ainda pendentes no lançamento. Não há evidência que permita declarar estas operações plenamente conformes só por não haver banner.
+A revisão das integrações privadas, contratos/transferências e retenção técnica continua pendente, conforme a checklist do relatório de migração. Nenhum acesso ou operação sobre mensagens/submissões reais foi realizado.
 
 ## Alterações e validação local
 
@@ -120,3 +109,7 @@ O proprietário confirmou deteção de project-enquiry, notificação recebida n
 A política FR/PT/EN passa a identificar Gmail (Google) e Cloudflare Email Routing, removendo a anterior indicação de que a identidade dos serviços de email era desconhecida. As garantias contratuais/transferências, logs e integrações privadas continuam por verificar. A retenção de 12 meses continua proposta, ainda sem adoção operacional, conforme o proprietário. Não foi acrescentado banner nem alterada a gravação de cookies.
 
 Identidade/registo profissionais confirmados pelo proprietário; regime de IVA continua separado e por confirmar, sem deduzir isenção da ausência de número válido. A suite de 62 testes voltou a passar após as alterações. Estado atual e restantes bloqueios: [PRODUCTION-MIGRATION.md](PRODUCTION-MIGRATION.md). Nenhum merge, push ou deploy executado.
+
+## Confirmação fiscal e política corrigida — seguimento de 3 de novembro
+
+O proprietário confirmou franchise en base de TVA, agora refletida nas menções legais sem inventar número intracomunitário. A política foi corrigida nas três línguas para distinguir formulários/emails de pedidos sem seguimento, correspondência comercial e documentos contabilísticos. A orientação Gmail/Netlify acima substitui a proposta anterior demasiado abrangente. Não existe nova automação, CMP ou alteração de serviços. Permanecem pendentes a implementação operacional da conservação/arquivo e as verificações privadas já documentadas.

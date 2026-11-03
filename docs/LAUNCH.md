@@ -9,22 +9,22 @@ A preparação técnica local está concluída em `v2`; faltam os pontos operaci
 ## Confirmado e aplicado
 
 - Identidade/registo confirmados pelo proprietário: Ricardo SILVA LOPES EI, SIREN 107 688 467, SIRET 107 688 467 00011, Insee 15/07/2026, RNE/INPI 01/08/2026, atividade programação informática/APE 62.01Z e domiciliação em Bâtiment 13, 390 avenue François Billoux, La Ciotat. Menções atualizadas em FR/PT/EN; nome público Ricardo Lopes preservado.
-- Ausência de número intracomunitário válido no registo **não prova isenção de IVA**. Retirada a afirmação do art. 293 B; confirmação fiscal separada em `vatRegimeConfirmed: false`.
+- O proprietário confirmou **franchise en base de TVA** em 03/11/2026. Menção FR/PT/EN atualizada para TVA/IVA não aplicável; `vatRegimeConfirmed: true`. Nenhum número intracomunitário foi inventado.
 - O proprietário confirmou `project-enquiry` em Active forms, teste real, notificação recebida no Gmail e encaminhamento de `contact@rlopes.pt` via Cloudflare. Testes em 02/11/2026, aproximadamente 23h48–23h53, Europe/Paris. **Apenas a visualização da submissão na lista continua pendente.**
 - Respostas através do Gmail são intencionais. Política identifica Gmail/Google e Cloudflare Email Routing; não foi acrescentado SMTP ou revelado destinatário pessoal. Garantias/transferências privadas ainda precisam de revisão.
 - Nenhum tracker opcional demonstrado; sem banner. `NEXT_LOCALE` permanece funcional, apenas após escolha explícita, até um ano; navegar não renova a preferência.
 
 ## Pendências antes de merge/publicação
 
-- [ ] Confirmar regime de IVA aplicável; não preencher isenção por suposição. Rever âmbito B2C/mediação se aplicável.
+- [ ] Rever âmbito B2C/mediação se aplicável. O regime de franchise en base de TVA já foi confirmado.
 - [ ] Obter telefone oficial Netlify; nome/morada estão verificados nos [termos oficiais](https://www.netlify.com/legal/terms-of-use/), telefone continua `null`.
-- [ ] Adotar/executar conservação dos pedidos sem projeto até 12 meses após último contacto substantivo. Rotina mensal deve abranger email, Netlify Forms, spam, duplicados e exportações, respeitando o limite. Clientes seguem obrigações próprias. Procedimento na secção 3 do relatório final; ainda não implementado/automatizado.
+- [ ] Aplicar a [conservação por finalidade e arquivo separado](DATA-RETENTION.md): 12 meses propostos só para pedidos sem seguimento sem outra justificação legal; referência de 5 anos para contratos/correspondência comercial; 10 anos para documentos contabilísticos a partir do encerramento do exercício. Rever Gmail, Netlify Forms e cópias, preservando prova necessária. Organização/revisão/arquivo ainda por implementar; nenhuma eliminação automática.
 - [ ] Rever Analytics/Web Analytics, snippets, replay, pixels, webhooks, log drains, plugins, contratos/transferências e retenção de logs. Estado privado desconhecido, não presumido desativado.
 - [ ] Localizar no painel a submissão já testada, verificando também spam. Evitar repetir pedidos reais desnecessariamente; notificação/encaminhamento já confirmados.
 - [ ] Investigar logs do 500 de `/pt/privacy` observado em 02/11/2026. As seis consultas de 03/11 devolveram 200; causa ainda não identificada pelo proprietário.
 - [ ] Guardar deploy ID/URL/commit da produção Vite atual e do preview atual. Último commit verificado anteriormente no painel era `2b83e05`; não considerado necessariamente atual.
 
-`registrationScopeConfirmed: true` reflete confirmação de identidade/registo. `vatRegimeConfirmed: false`, `retentionPolicyConfirmed: false` e telefone Netlify nulo mantêm **check:production com saída 1 esperada**. Só atualizar com confirmação factual; esse comando não substitui o checklist externo.
+`registrationScopeConfirmed: true` reflete confirmação de identidade/registo. `vatRegimeConfirmed: true` regista o regime agora confirmado. `retentionPolicyConfirmed: false` e telefone Netlify nulo mantêm **check:production com saída 1 esperada**. Só atualizar com confirmação factual; esse comando não substitui o checklist externo.
 
 ## Netlify: configuração preparada na raiz
 

@@ -52,6 +52,17 @@ export default async function Privacy({
         <section key={key}>
           <h2>{t(key)}</h2>
           <p>{t(key + "Body")}</p>
+          {key === "retention" &&
+            [
+              "retentionEnquiries",
+              "retentionBusiness",
+              "retentionAccounting",
+              "retentionArchive",
+            ].map((category) => (
+              <p key={category}>
+                <strong>{t(category)}</strong> {t(category + "Body")}
+              </p>
+            ))}
           {key === "controller" && (
             <p>
               <a href={"mailto:" + site.email}>{site.email}</a>
