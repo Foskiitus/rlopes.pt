@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-31T22:43:44.244Z",
+  "title": "Design System: Ricardo Lopes",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0014 106.5)",
+          "oklch(26% 0.0026 106.5)",
+          "oklch(37% 0.0036 106.5)",
+          "oklch(49% 0.0040 106.5)",
+          "oklch(61% 0.0040 106.5)",
+          "oklch(73% 0.0034 106.5)",
+          "oklch(85% 0.0022 106.5)",
+          "oklch(95% 0.0008 106.5)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Near-black Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.9)",
+          "oklch(26% 0.0000 89.9)",
+          "oklch(37% 0.0000 89.9)",
+          "oklch(49% 0.0000 89.9)",
+          "oklch(61% 0.0000 89.9)",
+          "oklch(73% 0.0000 89.9)",
+          "oklch(85% 0.0000 89.9)",
+          "oklch(95% 0.0000 89.9)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Electric Lime",
+        "tonalRamp": [
+          "oklch(15% 0.0700 121.6)",
+          "oklch(26% 0.1301 121.6)",
+          "oklch(37% 0.1801 121.6)",
+          "oklch(49% 0.2001 121.6)",
+          "oklch(61% 0.2001 121.6)",
+          "oklch(73% 0.1701 121.6)",
+          "oklch(85% 0.1100 121.6)",
+          "oklch(95% 0.0400 121.6)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0045 118.3)",
+          "oklch(26% 0.0084 118.3)",
+          "oklch(37% 0.0117 118.3)",
+          "oklch(49% 0.0130 118.3)",
+          "oklch(61% 0.0130 118.3)",
+          "oklch(73% 0.0110 118.3)",
+          "oklch(85% 0.0071 118.3)",
+          "oklch(95% 0.0026 118.3)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "tonalRamp": [
+          "oklch(15% 0.0048 115.9)",
+          "oklch(26% 0.0089 115.9)",
+          "oklch(37% 0.0123 115.9)",
+          "oklch(49% 0.0137 115.9)",
+          "oklch(61% 0.0137 115.9)",
+          "oklch(73% 0.0116 115.9)",
+          "oklch(85% 0.0075 115.9)",
+          "oklch(95% 0.0027 115.9)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Soft Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0033 113.2)",
+          "oklch(26% 0.0061 113.2)",
+          "oklch(37% 0.0084 113.2)",
+          "oklch(49% 0.0093 113.2)",
+          "oklch(61% 0.0093 113.2)",
+          "oklch(73% 0.0079 113.2)",
+          "oklch(85% 0.0051 113.2)",
+          "oklch(95% 0.0019 113.2)"
+        ]
+      },
+      "error": {
+        "role": "error",
+        "displayName": "Error Red",
+        "tonalRamp": [
+          "oklch(15% 0.0573 31.1)",
+          "oklch(26% 0.1065 31.1)",
+          "oklch(37% 0.1474 31.1)",
+          "oklch(49% 0.1638 31.1)",
+          "oklch(61% 0.1638 31.1)",
+          "oklch(73% 0.1393 31.1)",
+          "oklch(85% 0.0901 31.1)",
+          "oklch(95% 0.0328 31.1)"
+        ]
+      },
+      "field-line": {
+        "role": "neutral",
+        "displayName": "Field Boundary",
+        "tonalRamp": [
+          "oklch(15% 0.0288 120.0)",
+          "oklch(26% 0.0535 120.0)",
+          "oklch(37% 0.0740 120.0)",
+          "oklch(49% 0.0823 120.0)",
+          "oklch(61% 0.0823 120.0)",
+          "oklch(73% 0.0699 120.0)",
+          "oklch(85% 0.0452 120.0)",
+          "oklch(95% 0.0165 120.0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Phone hero only; tablet scale is documented in DESIGN.md."
+      },
+      "display-desktop": {
+        "displayName": "Display Desktop",
+        "purpose": "Approved expressive hero only, from 1100px; scoped exception to the default 96px ceiling."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Phone capabilities heading; responsive section-specific scales are documented in DESIGN.md."
+      },
+      "project-title": {
+        "displayName": "Project Title",
+        "purpose": "Phone selected-project title; 48px from 768px."
+      },
+      "capability-title": {
+        "displayName": "Capability Title",
+        "purpose": "Phone/tablet capability title; 30px from 1100px."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading text and 16px form inputs."
+      },
+      "description": {
+        "displayName": "Description",
+        "purpose": "Hero and project descriptions with 1.5 line-height."
+      },
+      "supporting": {
+        "displayName": "Supporting",
+        "purpose": "Phone supporting information; scoped desktop 12–13px exceptions stay in DESIGN.md."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Primary phone actions; hero remains 16px on desktop."
+      },
+      "link": {
+        "displayName": "Link",
+        "purpose": "Base phone text actions; project/social and desktop variants are documented separately."
+      },
+      "navigation": {
+        "displayName": "Navigation",
+        "purpose": "Desktop page anchors."
+      },
+      "project-navigation": {
+        "displayName": "Project Navigation",
+        "purpose": "Project anchor labels; active weight is 700."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Visible phone field labels; 14px on desktop."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "control-color",
+        "value": "background 0.2s, color 0.2s",
+        "purpose": "Primary-action hover."
+      },
+      {
+        "name": "directional-icon",
+        "value": "transform 0.2s ease-out; translate(2px, -2px)",
+        "purpose": "Primary-action arrow hover."
+      },
+      {
+        "name": "gallery-scroll",
+        "value": "start: top 88px; distance: min(1200px, round(innerHeight * 1.2)); scrub: 0.3; ease: none",
+        "purpose": "One brief, reversible desktop sequence."
+      },
+      {
+        "name": "gallery-panel",
+        "value": "out: opacity 0, y -24, duration 0.3; in: opacity 1, y 0, duration 0.4",
+        "purpose": "Synchronized replacement of image and project information."
+      },
+      {
+        "name": "gallery-loprim3d-image",
+        "value": "inset(0 12% 0 12% round 14px) to inset(0 0 0 0 round 14px); scale 1.035 to 1; duration 0.45",
+        "purpose": "Storefront reveal during the first transition."
+      },
+      {
+        "name": "gallery-belofer-image",
+        "value": "inset(8% 0 8% 0 round 14px) to inset(0 0 0 0 round 14px); scale 0.96 to 1; duration 0.45",
+        "purpose": "Archived website reveal during the second transition."
+      },
+      {
+        "name": "pending-spinner",
+        "value": "spin 1s linear infinite",
+        "purpose": "Pending form submission only."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none !important; transition: none !important; scroll-behavior: auto",
+        "purpose": "Native-flow gallery and static feedback; no GSAP enhancement."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet",
+        "value": "min-width: 768px"
+      },
+      {
+        "name": "desktop-navigation",
+        "value": "min-width: 1024px"
+      },
+      {
+        "name": "large-screen-showcase",
+        "value": "min-width: 1100px"
+      },
+      {
+        "name": "wide-desktop",
+        "value": "min-width: 1201px"
+      },
+      {
+        "name": "animated-gallery",
+        "value": "(min-width: 1100px) and (min-height: 680px) and (prefers-reduced-motion: no-preference)"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Mobile primary action; the hero retains this text size and target on desktop.",
+      "html": "<div class=\"ds-preview\"><button class=\"ds-button\">Discuss a project<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10M7 17 17 7\"/></svg></button></div>",
+      "css": ".ds-preview{color:var(--ink,#141414);font-family:var(--font-body,\"DM Sans\"),sans-serif;font-size:16px;line-height:1.55}.ds-preview a{color:inherit;text-decoration:none;text-underline-offset:5px}.ds-preview :focus-visible{outline:2px solid var(--ink,#141414);outline-offset:5px}.ds-preview svg{flex-shrink:0}.ds-preview button,.ds-preview input{font:inherit}.ds-preview button{cursor:pointer}.ds-button{display:inline-flex;align-items:center;justify-content:center;gap:22px;padding:13px 20px;min-height:52px;font-size:16px;font-weight:650;border:1px solid transparent;border-radius:8px;background:var(--ink,#141414);color:var(--paper,#fafaf7);transition:background .2s,color .2s}.ds-button:hover{background:var(--accent,#d0f844);color:var(--ink,#141414);border-color:var(--ink,#141414)}.ds-button svg{transition:transform .2s ease-out}.ds-button:hover svg{transform:translate(2px,-2px)}.ds-button:disabled{opacity:.65;cursor:wait}@media(prefers-reduced-motion:reduce){.ds-button,.ds-button svg{transition:none}}"
+    },
+    {
+      "name": "Text Link",
+      "kind": "button",
+      "refersTo": "text-link",
+      "description": "Unfilled mobile action; project and social variants use 14px text and 44px targets.",
+      "html": "<div class=\"ds-preview\"><a class=\"ds-text-link\" href=\"#contact\">Discuss your needs<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10M7 17 17 7\"/></svg></a></div>",
+      "css": ".ds-preview{color:var(--ink,#141414);font-family:var(--font-body,\"DM Sans\"),sans-serif;font-size:16px;line-height:1.55}.ds-preview a{color:inherit;text-decoration:none;text-underline-offset:5px}.ds-preview :focus-visible{outline:2px solid var(--ink,#141414);outline-offset:5px}.ds-preview svg{flex-shrink:0}.ds-preview button,.ds-preview input{font:inherit}.ds-preview button{cursor:pointer}.ds-text-link{display:inline-flex;align-items:center;gap:10px;font-size:16px;font-weight:600;min-height:48px;border:0;padding:0;background:none}.ds-text-link:hover{text-decoration:underline}"
+    },
+    {
+      "name": "Light Contact Field",
+      "kind": "input",
+      "refersTo": "input-light",
+      "description": "Mobile paper field with a visible label on lime.",
+      "html": "<div class=\"ds-preview\"><div class=\"ds-field-surface\"><div class=\"ds-field\"><label for=\"ds-email\">Email</label><input id=\"ds-email\" type=\"email\" autocomplete=\"email\" required aria-describedby=\"ds-email-error\"><p id=\"ds-email-error\" class=\"ds-field-error\" hidden>Enter a valid email address.</p></div></div></div>",
+      "css": ".ds-preview{color:var(--ink,#141414);font-family:var(--font-body,\"DM Sans\"),sans-serif;font-size:16px;line-height:1.55}.ds-preview a{color:inherit;text-decoration:none;text-underline-offset:5px}.ds-preview :focus-visible{outline:2px solid var(--ink,#141414);outline-offset:5px}.ds-preview svg{flex-shrink:0}.ds-preview button,.ds-preview input{font:inherit}.ds-preview button{cursor:pointer}.ds-field-surface{background:var(--accent,#d0f844);padding:16px}.ds-field label{display:block;font-size:16px;font-weight:600;margin-bottom:8px}.ds-field input{display:block;width:100%;min-height:52px;padding:12px;border:1px solid #606d34;border-radius:8px;background:var(--paper,#fafaf7);color:var(--ink,#141414);font-size:16px}.ds-field input:focus{border-color:var(--ink,#141414)}.ds-field input[aria-invalid]{border-color:var(--error,#a32615)}.ds-field input:disabled{opacity:.65;cursor:wait}.ds-field-error{font-size:14px;color:var(--error,#a32615);margin-top:8px}.ds-field-error[hidden]{display:none}"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Desktop wordmark and page anchors on the flat paper header.",
+      "html": "<div class=\"ds-preview\"><header class=\"ds-header\"><a class=\"ds-wordmark\" href=\"#top\">ricardo lopes<span aria-hidden=\"true\">.</span></a><nav class=\"ds-header-nav\" aria-label=\"Main navigation\"><a href=\"#work\">Work</a><a href=\"#services\">Services</a><a href=\"#about\">About</a></nav></header></div>",
+      "css": ".ds-preview{color:var(--ink,#141414);font-family:var(--font-body,\"DM Sans\"),sans-serif;font-size:16px;line-height:1.55}.ds-preview a{color:inherit;text-decoration:none;text-underline-offset:5px}.ds-preview :focus-visible{outline:2px solid var(--ink,#141414);outline-offset:5px}.ds-preview svg{flex-shrink:0}.ds-preview button,.ds-preview input{font:inherit}.ds-preview button{cursor:pointer}.ds-header{display:flex;align-items:center;justify-content:space-between;gap:30px;min-height:76px;padding-inline:var(--gutter,20px);background:var(--paper,#fafaf7);border-bottom:1px solid var(--line,#d5d7cd)}.ds-wordmark{font-size:24px;font-weight:750;letter-spacing:-.04em;line-height:1;white-space:nowrap}.ds-wordmark span{background:var(--accent,#d0f844);padding-right:3px}.ds-header-nav{display:flex;gap:24px;margin-left:auto;margin-right:20px}.ds-header-nav a{font-size:14px;font-weight:550;padding-block:12px}.ds-header-nav a:hover{text-decoration:underline;text-decoration-thickness:2px}"
+    },
+    {
+      "name": "Circular Contact Control",
+      "kind": "button",
+      "refersTo": "header-contact",
+      "description": "44px contact action on every viewport.",
+      "html": "<div class=\"ds-preview\"><a class=\"ds-contact\" href=\"#contact\" aria-label=\"Contact\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10M7 17 17 7\"/></svg></a></div>",
+      "css": ".ds-preview{color:var(--ink,#141414);font-family:var(--font-body,\"DM Sans\"),sans-serif;font-size:16px;line-height:1.55}.ds-preview a{color:inherit;text-decoration:none;text-underline-offset:5px}.ds-preview :focus-visible{outline:2px solid var(--ink,#141414);outline-offset:5px}.ds-preview svg{flex-shrink:0}.ds-preview button,.ds-preview input{font:inherit}.ds-preview button{cursor:pointer}.ds-contact{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--accent,#d0f844);color:var(--ink,#141414);transition:background .2s}.ds-contact:hover{background:var(--ink,#141414);color:var(--paper,#fafaf7)}@media(prefers-reduced-motion:reduce){.ds-contact{transition:none}}"
+    },
+    {
+      "name": "Project Navigation",
+      "kind": "nav",
+      "refersTo": "project-navigation",
+      "description": "Native anchors: horizontal underline on phones, a lime selected link in the desktop rail.",
+      "html": "<div class=\"ds-preview\"><nav class=\"ds-project-nav\" aria-label=\"Projects\"><a href=\"#spooliq\" aria-current=\"true\">SpoolIQ</a><a href=\"#loprim3d\">Loprim3D</a><a href=\"#belofer\">Belofer</a></nav></div>",
+      "css": ".ds-preview{color:var(--ink,#141414);font-family:var(--font-body,\"DM Sans\"),sans-serif;font-size:16px;line-height:1.55}.ds-preview a{color:inherit;text-decoration:none;text-underline-offset:5px}.ds-preview :focus-visible{outline:2px solid var(--ink,#141414);outline-offset:5px}.ds-preview svg{flex-shrink:0}.ds-preview button,.ds-preview input{font:inherit}.ds-preview button{cursor:pointer}.ds-project-nav{display:flex;align-items:center;gap:24px;min-height:52px;padding-inline:var(--gutter,20px);background:var(--paper,#fafaf7);border-block:1px solid var(--line,#d5d7cd)}.ds-project-nav a{display:flex;align-items:center;position:relative;min-height:50px;font-size:14px;font-weight:500;white-space:nowrap}.ds-project-nav a[aria-current]{font-weight:700}.ds-project-nav a[aria-current]:after{content:\"\";position:absolute;inset:auto 0 0;height:3px;background:var(--ink,#141414)}@media(min-width:1100px){.ds-project-nav{width:180px;min-height:300px;flex-direction:column;align-items:stretch;justify-content:center;gap:20px;padding:24px;border-block:0;border-right:1px solid var(--line,#d5d7cd)}.ds-project-nav a{padding:10px 12px;min-height:48px;border-radius:8px}.ds-project-nav a[aria-current]{background:var(--accent,#d0f844)}.ds-project-nav a[aria-current]:after{display:none}}"
+    },
+    {
+      "name": "Capability Entry",
+      "kind": "card",
+      "refersTo": "capability-entry",
+      "description": "Open capability text on paper, without a box, divider or icon.",
+      "html": "<div class=\"ds-preview\"><article class=\"ds-capability\"><h3>Websites</h3><p>A clear, useful website for your business.</p></article></div>",
+      "css": ".ds-preview{color:var(--ink,#141414);font-family:var(--font-body,\"DM Sans\"),sans-serif;font-size:16px;line-height:1.55}.ds-preview a{color:inherit;text-decoration:none;text-underline-offset:5px}.ds-preview :focus-visible{outline:2px solid var(--ink,#141414);outline-offset:5px}.ds-preview svg{flex-shrink:0}.ds-preview button,.ds-preview input{font:inherit}.ds-preview button{cursor:pointer}.ds-capability{background:var(--paper,#fafaf7);padding:0;border:0;border-radius:0}.ds-capability h3{margin:0;font-size:24px;font-weight:650;line-height:1.15;letter-spacing:-.03em}.ds-capability p{margin:8px 0 0;font-size:16px;line-height:1.55;max-width:40ch;color:var(--muted,#55574f)}@media(min-width:1100px){.ds-capability h3{font-size:30px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Light Tech × Creative Portfolio",
+    "overview": "Light Tech × Creative Portfolio presents an independent developer through expressive DM Sans typography, warm white, near-black ink and electric lime. Authentic interfaces supply the evidence; concise copy and clear actions leave room for the work.\n\nThe interface is open and predominantly flat. Large image frames change with the product, while rounded controls, quiet boundaries and a lime contact surface connect the experience. Native scrolling, readable mobile content and complete keyboard and reduced-motion access are part of this visual system.",
+    "keyCharacteristics": [
+      "One locally hosted DM Sans family with strong differences in scale and weight.",
+      "Warm paper, dark ink and one electric lime brand accent.",
+      "Authentic product images with individual framing and concise supporting text.",
+      "Flat supporting content, rectangular controls and circular icon actions.",
+      "Optional desktop motion over a complete semantic, native-scroll sequence."
+    ],
+    "rules": [
+      {
+        "name": "The Single Accent Rule",
+        "body": "Use electric lime for brand emphasis and active interaction; keep reading text in ink or muted ink and reserve error red for feedback.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Use DM Sans throughout and create hierarchy through the implemented scale, spacing and weights.",
+        "section": "typography"
+      },
+      {
+        "name": "The Scoped Scale Rule",
+        "body": "The approved large-screen hero alone uses clamp(90px, 8.5vw, 132px), exceeding the default 96px display ceiling; retain its tested two-line composition rather than applying that scale to other headings.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "Keep supporting interface surfaces flat; let authentic imagery, scale and local mats establish depth.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use locally hosted DM Sans and the implemented role-specific hierarchy.",
+      "Do preserve large authentic imagery and each project's documented framing.",
+      "Do keep phone reading text and form inputs at 16px with comfortable controls.",
+      "Do preserve visible focus, field labels, written feedback and discreet archive status.",
+      "Do keep a complete native-scroll sequence alongside optional desktop motion.",
+      "Do retain paper fields and ink actions on the lime contact surface."
+    ],
+    "donts": [
+      "Don't turn the approved hero scale exception into a global heading rule.",
+      "Don't add decorative kickers, technology badges, invented metrics or fabricated interfaces.",
+      "Don't introduce multiple brand accents, a serif display or a dark contact treatment.",
+      "Don't turn open supporting content into a generic grid of boxed icon cards.",
+      "Don't add CSS rotation or shadows to recreate the retired two-product worktable.",
+      "Don't make motion necessary to read projects, navigate or contact Ricardo."
+    ]
+  }
+}

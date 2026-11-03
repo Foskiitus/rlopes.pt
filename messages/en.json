@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "title": "Web developer in La Ciotat — Ricardo Lopes",
+    "description": "Websites and web applications for local businesses and independent professionals in La Ciotat and surrounding areas. Explore Ricardo Lopes’s work."
+  },
+  "nav": {
+    "label": "Main navigation",
+    "work": "Work",
+    "services": "Services",
+    "about": "About",
+    "contact": "Let’s discuss your project",
+    "menu": "Open menu",
+    "close": "Close menu",
+    "language": "Choose a language",
+    "home": "Ricardo Lopes — home",
+    "skip": "Skip to content"
+  },
+  "hero": {
+    "line1": "Websites.",
+    "line2": "Built for you.",
+    "description": "Websites and web applications built around your business.",
+    "cta": "Let’s talk",
+    "secondary": "See my work",
+    "role": "Independent web developer",
+    "spooliqLink": "Explore SpoolIQ, my business management software",
+    "loprimLink": "Explore Loprim3D, my online store",
+    "software": "Web application",
+    "shop": "E-commerce",
+    "locality": "La Ciotat and surrounding areas"
+  },
+  "work": {
+    "title": "Selected projects",
+    "intro": "My products, businesses and web projects.",
+    "scroll": "Scroll to explore",
+    "list": "Read without animation",
+    "animated": "Enable transitions",
+    "visit": "Visit website",
+    "source": "View source",
+    "archive": "View archived screenshot",
+    "image": "Project screenshot",
+    "next": "Next project",
+    "previous": "Previous project",
+    "preview": "Project preview",
+    "close": "Close preview",
+    "archived": "Archived project",
+    "navigation": "Explore the projects",
+    "contact": "What could I build for you?"
+  },
+  "projects": {
+    "spooliq": {
+      "description": "An application to manage stock, production and costs for my 3D-printing business.",
+      "alt": "Real SpoolIQ dashboard showing production orders, stock alerts and business activity."
+    },
+    "loprim3d": {
+      "description": "My online store for 3D-printed creations, from catalogue to sale.",
+      "alt": "Loprim3D homepage featuring the MinoZoo collection of articulated animal keyrings."
+    },
+    "photocelos": {
+      "description": "A platform for exploring the heritage of Barcelos through 360-degree panoramic photography.",
+      "alt": "Archived PhotoCelos screenshot, a platform exploring the heritage of Barcelos through 360-degree panoramic photography."
+    },
+    "belofer": {
+      "description": "A website built to introduce a company and its services.",
+      "alt": "Archived screenshot of the Belofer company website."
+    },
+    "tecniwall": {
+      "description": "A website for a construction business.",
+      "alt": "Archived screenshot of Tecniwall’s construction company website."
+    },
+    "tarefas": {
+      "description": "A task-management application built as part of a training course.",
+      "alt": "Screenshot of the Tarefas+ task-management application."
+    },
+    "evently": {
+      "description": "An event-management application built from a tutorial.",
+      "alt": "Evently visual identity from the original repository."
+    },
+    "tempo": {
+      "description": "A personal experiment building a mobile weather application.",
+      "alt": "Historical screenshot of the TempoApp weather application."
+    },
+    "gestao-stocks": {
+      "description": "A web application created to replace manual Excel processes and make inventory management easier in a textile factory.",
+      "alt": "Gestão de Stocks dashboard with warehouse modules and a monthly inventory-entry chart using demonstration data."
+    }
+  },
+  "archive": {
+    "title": "More work",
+    "commercial": "More websites. Less talking.",
+    "commercialNote": "Original versions preserved in the archive.",
+    "experiments": "Experiments & archives",
+    "experimentsNote": "Personal projects and learning exercises.",
+    "expand": "See the projects",
+    "collapse": "Collapse personal projects",
+    "recovered": "Archived applications"
+  },
+  "services": {
+    "title": "Your business. Your tools.",
+    "intro": "One person to work with, from your first idea to launch.",
+    "items": [
+      {
+        "title": "Websites",
+        "text": "Present your business, build trust and make it easy to get in touch."
+      },
+      {
+        "title": "Custom applications",
+        "text": "Simplify your operations with a tool that fits your working day."
+      },
+      {
+        "title": "E-commerce",
+        "text": "Showcase your products and sell them online."
+      }
+    ],
+    "cta": "Let’s discuss what you need"
+  },
+  "approach": {
+    "title": "From idea to launch.",
+    "intro": "You work directly with me, at every step.",
+    "steps": [
+      {
+        "title": "Define",
+        "text": "Your needs, priorities and scope."
+      },
+      {
+        "title": "Design",
+        "text": "Structure, content and interface."
+      },
+      {
+        "title": "Develop",
+        "text": "Build, test and refine."
+      },
+      {
+        "title": "Launch",
+        "text": "Go live and get up to speed."
+      }
+    ]
+  },
+  "about": {
+    "title": "From real work to code.",
+    "name": "Ricardo Lopes",
+    "role": "Ricardo Lopes · Independent developer in France",
+    "body": "Before building applications, I managed a textile warehouse. I started by creating a tool for our stock. Today, I develop for businesses and for my own venture Loprim3D, which led to SpoolIQ.",
+    "portrait": "Illustration of Ricardo Lopes, preserved from the original portfolio"
+  },
+  "contact": {
+    "title": "Your project\ncomes next.",
+    "intro": "A website, an application, an idea. Tell me what you need.",
+    "name": "Your name",
+    "email": "Your email address",
+    "type": "Your project",
+    "description": "What you would like to build",
+    "descriptionHint": "Your business, your needs and your timeline, if you know it.",
+    "choose": "Select a project type",
+    "types": {
+      "website": "A website",
+      "application": "A web application",
+      "shop": "An online store",
+      "redesign": "A redesign or improvement",
+      "other": "A project to explore"
+    },
+    "submit": "Send your enquiry",
+    "sending": "Sending…",
+    "success": "Thank you, your enquiry has been sent. I’ll reply to the email address you provided.",
+    "error": "Your enquiry could not be sent. Please try again or email contact@rlopes.pt.",
+    "required": "Please complete this field.",
+    "invalidEmail": "Enter a valid email address.",
+    "tooShort": "Describe your project in at least 20 characters.",
+    "tooLong": "Your message must contain no more than 5,000 characters.",
+    "invalidType": "Select a project type.",
+    "privacy": "Ricardo Lopes uses these details to assess your project and reply. Netlify Forms and email service providers process the enquiry.",
+    "privacyLink": "How your data is used",
+    "honeypot": "Leave this field empty",
+    "alternative": "Or send an email directly",
+    "newMessage": "Send another enquiry",
+    "nojs": "Enable JavaScript to send this form, or contact me directly by email.",
+    "requiredNote": "All fields are required.",
+    "locality": "Based in La Ciotat, I help local businesses and independent professionals bring their web projects to life."
+  },
+  "footer": {
+    "rights": "Independent web development",
+    "legal": "Legal notice",
+    "privacy": "Privacy",
+    "top": "Back to top",
+    "languages": "Languages",
+    "location": "La Ciotat, France"
+  },
+  "legal": {
+    "title": "Legal notice",
+    "intro": "Information about the publisher and hosting of rlopes.pt.",
+    "publisher": "Publisher",
+    "businessType": "Individual entrepreneur established in France (EI)",
+    "director": "Publication director: Ricardo SILVA LOPES",
+    "registration": "Registration",
+    "vat": "French VAT exemption scheme (franchise en base de TVA) — VAT not applicable.",
+    "hosting": "Hosting",
+    "hostingNote": "Netlify’s telephone number could not be verified in the official sources consulted. This required detail still needs to be completed before production publication.",
+    "intellectual": "Intellectual property",
+    "intellectualBody": "The content and work presented belong to their respective owners. Their inclusion in this portfolio does not transfer any reproduction rights.",
+    "contact": "Business contact",
+    "back": "Return to the website",
+    "verification": "The professional details displayed must be checked with the publisher before publication.",
+    "establishment": "Web development activity established in France, in La Ciotat.",
+    "responsibility": "Information and external links",
+    "responsibilityBody": "The work and information presented describe the publisher’s activity; service terms are agreed in a separate quote or contract. You can report errors using the professional contact details shown. External links lead to services with their own terms and policies. The publisher aims to keep this website available and up to date, without guaranteeing uninterrupted availability. These statements do not restrict mandatory user rights or liabilities that cannot legally be excluded.",
+    "dataProtection": "Data protection",
+    "dataProtectionBody": "Information about the form, recipients, retention, your rights and the language cookie is set out in the privacy policy.",
+    "privacyLink": "Read the privacy policy",
+    "law": "Applicable law and complaints",
+    "lawBody": "This portfolio presents a professional activity established in France. Its use is subject to applicable French and European rules, while preserving mandatory protections available to users. For a complaint, first contact Ricardo Lopes at contact@rlopes.pt to seek an amicable resolution. Otherwise, applicable law and jurisdiction rules determine the available remedies.",
+    "inseeRegistration": "Insee registration: {date}",
+    "rneRegistration": "RNE (INPI) registration: {date}",
+    "activity": "Main activity: computer programming — APE code {code}"
+  },
+  "privacy": {
+    "title": "Privacy",
+    "intro": "How your information is used on this website.",
+    "controller": "Data controller",
+    "controllerBody": "Ricardo Silva Lopes EI is responsible for personal data processing associated with this portfolio and your contact enquiries.",
+    "collection": "Data and purpose",
+    "collectionBody": "The form asks for your name, email address, project type and description. These fields are required to submit the form; you can also write directly by email. The page language is submitted too. For a quote or service you request on your own behalf, processing is based on pre-contractual steps taken at your request (GDPR Article 6(1)(b)). For other enquiries, including those made on behalf of a business, it is based on Ricardo Lopes’s legitimate interest in responding to professional enquiries (Article 6(1)(f)). These details are not used for a newsletter. Please avoid sending sensitive information or details unrelated to your project.",
+    "processing": "Recipients and hosting",
+    "processingBody": "Ricardo Lopes receives your enquiries. Netlify hosts the website, stores submissions in Netlify Forms and sends notifications to Gmail (Google). Netlify’s documentation describes spam filtering through Akismet (Automattic). Messages sent directly to contact@rlopes.pt are forwarded through Cloudflare Email Routing to Gmail, from which Ricardo Lopes replies. These services may involve transfers outside the European Economic Area, including to the United States. Netlify’s agreement describes the safeguards it provides, including standard contractual clauses where applicable. The safeguards that actually apply to the services used still need confirmation before production launch. You can request further details or a copy of the safeguards using the contact address.",
+    "retention": "Retention",
+    "retentionBody": "The policy below proposes retention periods proportionate to each purpose. Messages currently remain in the mailbox without a formal deletion schedule. Review by category and separate archiving still need to be implemented; neither deletion nor archiving is automated.",
+    "rights": "Your rights",
+    "rightsBody": "You may request access, correction, deletion or restriction of your data, and portability where applicable. You may also object, on grounds relating to your situation, to processing based on legitimate interests. Write to the contact address listed on this page. You may lodge a complaint with the French data protection authority, CNIL.",
+    "cookies": "Cookies and browser storage",
+    "cookiesBody": "The portfolio does not load advertising scripts, tracking pixels or audience analytics tools in your browser. The functional NEXT_LOCALE cookie is created only when you choose a language. It contains the code fr, pt or en, is limited to the domain you visit and expires one year after your last explicit choice; ordinary browsing does not extend that period. Its only purpose is to remember your language, without a tracking identifier. The portfolio does not use localStorage or sessionStorage to store information. Fonts and images are served from this website.",
+    "provider": "Netlify data processing agreement (PDF)",
+    "authority": "CNIL website",
+    "technical": "Connection and security",
+    "technicalBody": "To serve pages and keep the website secure, Netlify receives technical information such as your IP address, the date and time, the requested URL and browser information. Security and diagnostics rely on the legitimate interest in maintaining a reliable website and preventing abuse. The form also includes a technical field to help prevent spam. Log retention periods and any server-side analytics or other integrations enabled in the Netlify account still need verification. The absence of browser trackers does not establish the absence of server-side processing.",
+    "preferences": "Changing your language preference",
+    "preferencesBody": "You can change language at any time using the selector at the top or bottom of the page. To remove this preference, delete the NEXT_LOCALE cookie in your browser settings; you can also block cookies. Navigation and the contact form remain available. Without a saved preference, the home address without a language code opens the French version. This cookie is limited to the language preference you request and is exempt from prior consent.",
+    "external": "Links to other websites",
+    "externalBody": "Links to projects, GitHub, LinkedIn, CNIL or Netlify documents are ordinary links, without embedded social widgets, videos or maps. They do not load these services until you open them. Once you follow a link, the destination website’s policy applies.",
+    "retentionEnquiries": "Enquiries that do not proceed.",
+    "retentionEnquiriesBody": "For enquiries that do not lead to a project, the proposed period is 12 months after the last substantive exchange, unless another documented legal justification applies. This covers Netlify form data and contact emails, provided they are not business, accounting or evidential records that need to be retained under the rules below.",
+    "retentionBusiness": "Clients and business correspondence.",
+    "retentionBusinessBody": "Records necessary to perform contracts, evidence agreements and establish or defend rights must be retained for the applicable periods, including the 5-year reference period for contracts and business correspondence. The starting point depends on the document and applicable rules; a specific obligation or dispute may justify a different period. This does not justify keeping every message indiscriminately.",
+    "retentionAccounting": "Invoices and accounting records.",
+    "retentionAccountingBody": "Invoices, supporting documents and accounting records are subject to statutory retention periods, including 10 years from the end of the relevant financial year. The 12-month period for enquiries that do not proceed does not apply to them.",
+    "retentionArchive": "Storage and separate archives.",
+    "retentionArchiveBody": "A Netlify submission or Gmail email is classified by its content and purpose, not just where it is stored. The planned procedure is to move only necessary records into a separate archive with restricted access after the business relationship ends, to meet legal obligations and the legitimate interest in establishing or defending rights. Unnecessary copies and records whose retention period has ended should be deleted after review. These manual steps still need to be implemented; no indiscriminate automatic deletion is planned."
+  },
+  "error": {
+    "title": "This page doesn’t exist.",
+    "body": "The link may have changed. Find the projects and services on the homepage.",
+    "home": "Return home",
+    "unexpected": "Something went wrong.",
+    "retry": "Try again"
+  }
+}
